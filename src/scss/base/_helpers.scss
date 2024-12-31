@@ -1,0 +1,18 @@
+@use '../abstract/index' as *;
+
+.container{
+    width: 80%;
+    margin: auto;
+
+    @media(max-width:576px){width: 90%;}
+}
+
+.section-header{
+    @include section-header;
+
+    span{
+        color: $primary-color;
+    }
+}
+
+

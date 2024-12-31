@@ -1,0 +1,45 @@
+@use '../abstract/index' as *;
+
+@mixin button($bg:$primary-color, $text-transform:capitalize, $bg-hover:transparent){
+    background-color: $bg;
+    text-transform: $text-transform;
+    border: 2px solid $primary-color;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    border-radius: 40px;
+    padding: 0.8rem 2.5rem;
+    transition: 0.4s linear;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $bg-hover;
+        color: $white-color;
+    }
+
+    &:hover >i{
+        color: $primary-color;
+    }
+
+    @media(max-width:576px){
+        font-size: 14px;
+        padding: 0.8rem 2rem;
+    }
+}
+
+.button-primary{
+    @include button;
+}
+
+.button-primary > i,
+.button-outline > i{
+    color: #fff;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+.button-outline{
+    @include button(transparent, capitalize, $primary-color)
+}

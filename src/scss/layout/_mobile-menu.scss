@@ -1,0 +1,52 @@
+@use '../abstract/index' as *;
+
+.mobile{
+    @include positioning(fixed, 0, auto, 0, 0, 50%);
+    @include flex(center, center, column, 32px);
+    background-color: $secondary-color;
+    transform: translateX(-100%);
+    transition: 0.4s linear;
+    z-index: 999;
+    padding: 0 16px;
+
+    &.active{transform: translateX(0);}
+
+    #close{
+        @include positioning(fixed, 30px, 20px, auto, auto);
+        color: #fff;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    &__list{
+        
+        .mobile__item{
+            text-align: center;
+
+            .mobile__link{
+                @include text(16px, 700, $white-color, uppercase);
+                margin-bottom: 1.5rem;
+                display:inline-block;
+
+                &:hover{color: $primary-color;}
+            }
+        }
+    }
+
+    &__text{
+        @include text(14px, 400, $white-color, none, center);
+
+        span{color: $primary-color;}
+    }
+
+    &__icons{
+        display: flex;
+        gap: 2rem;
+
+        a{
+            font-size: 18px;
+
+            &:hover{color: $primary-color;}
+        }
+    }
+}

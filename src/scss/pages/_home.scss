@@ -1,0 +1,126 @@
+@use '../abstract/index' as *;
+
+.header{
+    height: 100svh;
+    position: relative;
+    display: flex;
+
+    &__bg{
+        flex: 1.5;
+
+        @media(max-width:1200px){display: none;}
+    }
+
+    &__imgs{
+        flex: 3;
+        display: flex;
+
+        @media(max-width:1200px){flex-direction: column;}
+
+        &__item{
+            flex: 1;
+            @include flex(flex-end, stretch, column);
+            padding-left: 60px;
+            background-size: cover;
+            height: 100%;
+
+            span{
+                font-family: "Noto Nastaliq Urdu", serif;
+                
+                &::before{
+                    display: block;
+                    content: "";
+                    height: 75px;
+                    width: 100%;
+                    border-left: 1px solid #fff;
+                    margin-bottom: 16px;
+                }
+
+                @media(max-width:1200px){display: none;}
+            }
+
+            p{
+                @include text(28px, 600, $white-color, capitalize);
+                max-width: 200px;
+                margin:20px 0 70px;
+
+                @media(max-width:1200px){display: none;}
+            }
+
+            &--one{
+                background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("../../src/img/toy-house-near-safety-construction-gear.jpg");
+                background-position: center;
+            
+                @media(max-width:1200px){background-position: bottom;}
+            }
+
+            &--two{
+                background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("../../src/img/woman-standing-near-wooden-rack-with-brush-white-paint.jpg");
+                background-position: center;
+            }
+
+            &--three{
+                background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("../../src/img/technician-checking-heating-system-boiler-room.jpg");
+                background-position: right;
+            }
+        }
+    }
+
+    &__text{
+        @include positioning(absolute, 50%, auto, auto, 200px, 700px);
+
+        @media(max-width:1200px){
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 90%;
+        }
+
+       .header__heading{
+            @extend %header-heading;
+            text-align: left;
+
+            @media(max-width:1200px){text-align: center;}
+
+            @media(max-width:768px){
+                font-size: 28px;
+                margin: auto;
+                width: 350px;
+            }
+
+            @media(max-width:400px){width: 100%;}
+        }
+
+       .header__p{
+            @extend %header-paragraph;
+            max-width: 450px;
+            text-align: left;
+            
+            @media(max-width:1200px){
+                margin: 16px auto 32px;
+                text-align: center;
+                max-width: 320px;
+            }
+
+            @media(max-width:400px){width: 100%;}
+       }
+
+       .header__btns{
+
+            @media(max-width:1200px){
+                @include flex(flex-start, center, column, 20px);
+            }
+
+            .button-outline{
+                display: none;
+
+                @media(max-width:1200px){display: inline-block;}
+            }
+       }
+    }
+
+}

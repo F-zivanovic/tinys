@@ -1,0 +1,19 @@
+@use '../abstract/index' as *;
+
+@keyframes arrow-down {
+    0%{transform: translateY(20px);}
+
+    50%{transform: translateY(0px);}
+
+    100%{transform: translateY(20px)}
+}
+
+#arrow{
+    @include positioning(absolute, auto, auto, 80px, 50%);
+    animation: arrow-down 1.5s infinite;
+    color: $primary-color;
+    font-size: 32px;
+    display: none;
+
+    @media(max-width: 992px){display: block;}
+}

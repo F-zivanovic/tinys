@@ -1,0 +1,58 @@
+@use '../abstract/index' as *;
+
+.blog-posts{
+
+    &__wrapper{
+        @include flex(space-between, stretch, wrap);
+        margin-top: 45px;
+        row-gap: 150px;
+
+        .blog-posts__item{
+            flex: 0 0 31%;
+
+            @media(max-width:1200px){flex: 0 0 45%;}
+            
+            @media(max-width:1200px){flex: 0 0 100%;}
+
+            .blog-posts__body{
+
+                .blog-posts__heading{
+                    font-weight: 500;
+                    font-size: 22px;
+                    margin-top: 16px;
+
+                    @media(max-width:768px){font-size: 15px;}
+                }
+
+                .blog-posts__date{
+                    margin-bottom: 16px;
+                    margin-top: 20px;
+
+                    i{font-size: 14px;}
+
+                    span{
+                        font-weight: 300;
+                        font-size: 10px;
+                        color: rgba(141, 141, 141, 1);
+                    }
+                }
+
+                .blog-posts__p{
+                    color: rgba(197, 197, 197, 1);
+                    text-align: justify;
+                    line-height: 18px;
+                    font-size: 11px;
+                    margin-bottom: 16px;
+                }
+
+                .blog-posts__link{
+                    font-weight: 700;
+                    font-size: 12px;
+                    text-transform: uppercase;
+
+                    &:hover{text-decoration: underline;}
+                }
+            }
+        }
+    }
+}

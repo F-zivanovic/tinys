@@ -1,0 +1,69 @@
+@use '../abstract/index' as *;
+
+.nav{
+    @include positioning(fixed, 0, auto, auto, 0, 100%);
+    @include flex(space-between, center);
+    background: transparent;
+    padding: 0 60px;
+    z-index: 999;
+    height: 10vh;
+
+    &.scrolled{background-color: $black-color;}
+
+    @media(max-width:576px){padding:0 32px;}
+
+    &__logo{
+
+        @media(max-width:1200px){order: 2;}
+
+        &-desktop{
+            width: 120px;
+
+            @media(max-width:1200px){display: none;}
+        }
+
+        &-mobile{
+            display: none;
+
+            @media(max-width:1200px){
+                width: 80px;
+                display: block;
+            }
+        }
+    }
+
+    &__list{
+        @include flex(flex-start, center, nowrap, 32px);
+
+        .nav__link{
+            @include text(14px, 500, $white-color, uppercase);
+
+            &:hover{color: $primary-color;}
+        }
+
+        @media(max-width:1200px){display: none;}
+    }
+
+    &__hamburger{
+        @include flex(space-between, stretch, column);
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+        display: none;
+
+        .hamburger__line{
+            width: 100%;
+            height: 3px;
+            background-color: $white-color;
+        }
+
+        .hamburger__line--mid{width: 80%;}
+
+        @media(max-width:1200px){display: flex;}
+
+        @media(max-width:576px){
+            width: 30px;
+            height: 20px;
+        }
+    }
+}

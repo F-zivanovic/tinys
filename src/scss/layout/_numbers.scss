@@ -1,0 +1,45 @@
+@use '../abstract/index' as *;
+
+.numbers{
+    @include flex(center, center, wrap);
+    position: relative;
+
+    @media(max-width:992px){row-gap: 64px;}
+
+    &__item{
+        flex-basis:20%;
+
+        @media(max-width:992px){flex-basis:45%;}
+
+        .numbers__number{
+            @include text(44px, 700, $primary-color, none, center);
+
+            @media(max-width:576px){font-size: 36px;}
+        }
+
+        .numbers__name{
+            @include text(14px, 600, $white-color, uppercase, center);
+            
+            @media(max-width:576px){
+                width: 100px;
+                margin: auto;
+            }
+        }
+    }
+
+
+    &__building{
+        position: absolute;
+        left: -150px;
+        bottom: 0;
+        width: 500px;
+        opacity: 1;
+        // height: 300px;
+
+        @media(max-width:992px){
+            display: none;
+        }
+    }
+
+}
+// TODO: Brojanje

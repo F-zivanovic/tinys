@@ -1,0 +1,130 @@
+@use '../abstract/index' as *;
+
+
+/*----------------------------------
+# HEADER section
+----------------------------------*/ 
+.header-p{
+    clip-path: polygon(0 1%, 100% 0%, 100% 75%, 0 100%);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100svh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../../src/img/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge.jpg');
+
+    @media(max-width:992px){
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    .header__wrapper{
+        @include flex(center, flex-start, column);
+        height: 100vh;
+
+        @media(max-width:992px){
+            align-items: center;
+            text-align: center;
+        }
+    
+        .header__heading{
+            @extend %header-heading;
+            
+            @media(max-width:768px){font-size: 37px;}
+            @media(max-width:450px){font-size: 30px;}
+        }
+
+        .header__p{
+            @extend %header-paragraph;
+            max-width: 650px;
+
+            @media(max-width:1200px){width: 350px;}
+            @media(max-width:400px){width: 100%;}
+        }
+    }
+
+    .header__triangle-one{
+        @include positioning(absolute, auto, auto, 0, -220px, 500px, 380px);
+        clip-path: polygon(49% 0, 0% 100%, 100% 100%);
+        background: rgba(255, 255, 255, 0.16);
+        z-index: -1;
+
+        @media(max-width:992px){display: none;}
+    }
+
+    .header__triangle-two{
+        @include positioning(absolute, auto, auto, 0, 100px, 500px, 600px);
+        clip-path: polygon(49% 0, 0% 100%, 100% 100%);
+        background: rgba(0, 0, 0, 0.16);
+        z-index: -1;
+
+        @media(max-width:992px){display: none;}
+
+    }
+
+    .header__triangle-three{
+        @include positioning(absolute, auto, auto, 0, 300px, 550px, 450px);
+        clip-path: polygon(74% 3%, 0% 100%, 100% 100%);
+        background: rgba(255, 21, 0, 0.16);
+        z-index: -1;
+
+        @media(max-width:992px){display: none;}
+
+    }
+
+}
+
+
+
+/*----------------------------------
+# VISION section
+----------------------------------*/ 
+.vision{
+    @include flex(center, center, column, 16px);
+    position: relative;
+    margin: 70px auto 150px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
+     url('../../src/img/professional-repairman-wearing-protective-gloves.jpg');
+     background-size: cover;
+     background-position: center;
+     border-radius: 20px;
+     text-align: center;
+     padding: 100px 0;
+
+     @media(max-width:1200px){margin: 70px 0;}
+
+     &__heading{
+        font-weight: 600;
+        font-size: 32px;
+        
+        span{color: $primary-color;}
+
+        @media(max-width: 992px){
+            font-size: 24px;
+            width: 230px;
+        }
+     }
+
+     &__p{
+        font-weight: 300;
+
+        @media(max-width: 992px){width: 350px;}
+
+        @media(max-width: 576px){
+            font-size: 14px;
+            max-width: 100%;
+        }
+     }
+
+     &__img{
+        opacity: 0.6;
+        width: 200px;
+        height: 120px;
+     }
+
+     &__brush{
+        @include positioning(absolute, auto, auto, -340px, -170px, 300px);
+        opacity: 0.2;
+
+        @media(max-width: 1200px){display: none;}
+     }
+}

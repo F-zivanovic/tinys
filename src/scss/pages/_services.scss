@@ -1,0 +1,238 @@
+@use '../abstract/index' as *;
+
+
+/*---------------------------
+# HEADER section
+---------------------------*/
+.header-s{
+    height: 100svh;
+    position: relative;
+    display: flex;
+
+    .header__item{
+        padding-left: 100px;
+
+        @media(max-width:1200px){ 
+            @include flex(center, center, column);
+            padding: 0 10%;
+            text-align: center;
+        }
+
+        .header__heading{
+            @extend %header-heading;
+            max-width: 650px;
+
+            @media(max-width:992px){
+                font-size: 32px;
+                max-width: 370px;
+            }
+
+            @media(max-width:450px){
+                font-size: 28px;
+                max-width: 100%;
+            }
+        }
+
+        .header__p{
+            @extend %header-paragraph;
+            max-width: 600px;
+
+            @media(max-width:992px){
+                font-size: 16px;
+                max-width: 350px;
+            }
+        }
+
+        .header__btns{
+            display: flex;
+            gap: 1rem;
+
+            @media(max-width:992px){
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    }
+
+    .header__item--bg{
+        @include flex(center, stretch, column);
+        flex: 1.3;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.7) 58.49%, rgba(255, 21, 0, 0.7) 194.03%);
+
+        @media(max-width:1200px){ display: none;}
+    }
+
+    .header__item--img{
+        flex: 1;
+        background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../../src/img/plasterboard-worker-installs-plasterboard-wall-kitchen-cabinets.jpg');
+        background-size: cover;
+        height: 100vh;
+
+        @media(max-width:1200px){
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 38.75%, rgba(255, 21, 0, 0.8) 753.46%),
+            url('../../src/img/plasterboard-worker-installs-plasterboard-wall-kitchen-cabinets.jpg');
+            background-size: cover;
+        }
+
+        & *{
+            display: none;
+
+            @media(max-width:1200px){ display: block;}
+        }
+    }
+}
+
+
+/*---------------------------
+# SERVICES section
+---------------------------*/
+.services{
+    width: 70%;
+    margin: auto;
+
+    @media(max-width:768px){width: 90%;}
+ 
+    &__header{
+        @include section-header(center, uppercase, 576px, 32px);
+        display: none;
+
+        @media(max-width:1200px){display: block;}
+        
+        &-p{
+            font-weight: 300;
+            max-width: 300px;
+            margin: 2rem auto;
+        }
+
+        &-tel{
+            @include text(16px, 300, $primary-color, capitalize);
+        }  
+    }
+
+    &__wrapper{ 
+        @include flex(flex-start, stretch, wrap);
+        margin-top: 48px;
+
+        .services__item{
+            flex-basis:33%;
+            padding: 32px;
+    
+            @media(max-width:1200px){flex-basis: 50%;}
+
+            @media(max-width:576px){
+                padding: 32px 16px;
+                // flex-basis: 100%;
+            }
+    
+            &:nth-child(1){
+                @media(max-width:1200px){
+                    display: none;
+                }
+            }
+    
+            &:nth-child(2){
+                @media(max-width:1200px){
+                    order: -1;
+                }
+            }
+    
+            &:nth-child(3){
+                @media(max-width:1200px){
+                    order: 0;
+                }
+            }
+    
+            &:nth-child(4){
+                @media(max-width:1200px){
+                    order: 2;
+                }
+            }
+    
+            &:nth-child(5){
+                @media(max-width:1200px){
+                    order: 1;
+                }
+            }
+    
+            &:nth-child(6){
+                @media(max-width:1200px){
+                    order: 3;
+
+                }
+            }
+    
+            .services__heading{
+                @include text(45px, 600, $white-color, uppercase);
+                margin-bottom: 60px;
+            }
+    
+            .services__text{
+                @include text(15px, 300, $white-color);
+                margin-bottom: 1rem;
+                max-width: 350px;
+            }
+    
+            .services__tel{
+                @include text(16px, 300, $primary-color, capitalize);
+            }
+    
+            .services__img{
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                line-height: 55px;
+                text-align: center;
+                box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
+                background: rgba(39, 39, 39, 1);
+            }
+    
+            .services__name{
+                @include text(24px, 500, $white-color);
+                margin: 100px 0 40px;
+
+                @media(max-width:1200px){
+                    font-size: 14px;
+                    margin: 32px 0 16px;
+                }
+            }
+    
+            .services__desc{
+                @include text(14px, 300,  rgba(220, 220, 220, 1));
+
+                @media(max-width:1200px){font-size: 12px;}
+            }
+        }
+    
+        .services__item--bg{
+            background-color: rgba(39, 39, 39, 1);
+    
+            .services__img{
+                box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+}
+
+/*---------------------------
+# BLOG section
+---------------------------*/
+.blog-posts{
+
+    &__item{
+        &.hidden{
+            @media(max-width:768px){display: none;}
+        }
+    }
+
+    &__btn{
+        display: none;
+
+        @media(max-width:768px){
+            display: block;
+            margin: 32px auto 0;
+            width: 150px;
+            text-align: center;
+        }
+    }
+}

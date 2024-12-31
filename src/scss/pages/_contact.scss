@@ -1,0 +1,49 @@
+@use '../abstract/index' as *;
+
+
+.contact{
+    text-align: center;
+    margin: 150px 0;
+    position: relative;
+    padding: 0 50px;
+
+    @media(max-width:992px){ margin-bottom: 50px}
+
+    &__heading{
+        font-weight: 600;
+        font-size: 40px;
+        margin-bottom: 1rem;
+
+        @media(max-width:992px){
+            font-size: 32px;
+            text-transform: uppercase;
+            width: 300px;
+            margin: auto;
+        }
+
+        @media(max-width:400px){width: 100%;}
+    }
+    
+    &__desc{
+        font-size: 18px;
+        color: rgba(207, 207, 207, 1);
+        margin: auto;
+        max-width: 770px;
+
+        @media(max-width:992px){
+            font-size: 15px;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+
+        @media(max-width:400px){width: 100%;}
+    }
+
+    &__key{
+        @include positioning(absolute, 20px, auto, 0, -42px, 300px);
+        opacity: 0.05;
+
+        @media(max-width:992px){display: none;}
+
+    }
+}
