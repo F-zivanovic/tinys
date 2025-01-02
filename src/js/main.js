@@ -32,6 +32,9 @@ document.addEventListener('scroll', ()=>{
 });
 
 
+
+
+
 // Arrow up icons
 const arrowUp = document.querySelector('.arrow__up');
 
@@ -45,32 +48,52 @@ document.addEventListener('scroll', ()=>{
 });
 
 
-// FAQ section
-const faqSection = document.querySelector('[data-faq="faq"]');
-const faqItem = faqSection.querySelectorAll('[data-faq="item"]');
-const faqBody = faqSection.querySelectorAll('[data-faq="body"]');
-const faqIcon = faqSection.querySelectorAll('i');
-
-faqItem.forEach((item, index)=>{
-
-    item.addEventListener('click', ()=>{
-        faqItem.forEach(item=>{item.classList.remove('active')});
-        faqBody.forEach(item=>{item.classList.remove('active')});
-        faqIcon.forEach(item=>{item.classList.remove('active')});
-
-        faqItem[index].classList.add('active');
-        faqBody[index].classList.add('active');
-        faqIcon[index].classList.add('active');
-    });
-})
- 
 
 
 // Scroll to top arrow
 const scrollBtn = document.querySelector('.arrow__up');
+
 scrollBtn.addEventListener('click', ()=>{
     window.scroll({ top: 0, behavior: "smooth" });
 });
+
+
+
+
+
+// FAQ section
+const faqItems = document.querySelectorAll('[data-key="faq-item"]');
+
+faqItems.forEach(item=>{
+
+    item.addEventListener('click', ()=>{
+        const answer = item.querySelector('[data-key="faq-body"]');
+        const arrowIcon = item.querySelector('i');
+      
+        const isActive = item.classList.contains('active');
+    
+        // Remove ACTIVE class with all relevant elements
+        faqItems.forEach(item=>{
+            item.classList.remove('active');
+            item.querySelector('[data-key="faq-body"]').classList.remove('active');
+            item.querySelector('i').classList.remove('active');
+        });
+
+        if(!isActive){
+            item.classList.add('active');
+            answer.classList.add('active');
+            arrowIcon.classList.add('active');
+        }
+    });
+});
+
+
+
+
+// 
+ 
+
+
 
 
 

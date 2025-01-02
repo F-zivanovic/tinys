@@ -35,6 +35,37 @@
     text-align: $text-align;
 }
 
+@mixin rwd($pixels, $type:max){
+
+    @if $pixels == 576 {
+        @media(#{$type}-width: #{$pixels}px) {
+            @content;
+        }
+    }
+
+    @if $pixels == 768 {
+        @media(#{$type}-width: #{$pixels}px) {
+            @content;
+        }
+    }
+
+    @if $pixels == 992 {
+        @media(#{$type}-width: #{$pixels}px) {
+            @content;
+        }
+    }
+
+    @if $pixels == 1200 {
+        @media(#{$type}-width: #{$pixels}px) {
+            @content;
+        }
+    }
+
+    @else{
+        @content;
+    }
+}
+
 @mixin section-header($align:center, $text-transform:capitalize, $bp:576px, $font-size:25px){
     text-align: $align;
 

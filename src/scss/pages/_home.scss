@@ -1,5 +1,9 @@
 @use '../abstract/index' as *;
 
+
+
+
+
 .header{
     height: 100svh;
     position: relative;
@@ -84,11 +88,14 @@
             @extend %header-heading;
             text-align: left;
 
-            @media(max-width:1200px){text-align: center;}
+            @media(max-width:1200px){
+                text-align: center;
+                max-width: 650px;
+                margin: auto;
+            }
 
             @media(max-width:768px){
                 font-size: 28px;
-                margin: auto;
                 width: 350px;
             }
 

@@ -1,6 +1,9 @@
 @use '../abstract/index' as *;
 
 
+
+
+
 /*----------------------------------
 # HEADER section
 ----------------------------------*/ 
@@ -19,7 +22,7 @@
 
     .header__wrapper{
         @include flex(center, flex-start, column);
-        height: 100vh;
+        height: 100%;
 
         @media(max-width:992px){
             align-items: center;
@@ -75,6 +78,133 @@
 
 
 
+
+
+/*----------------------------------
+# PROJECTS section
+----------------------------------*/ 
+.projects{
+    
+    &__header{
+        text-align: right;
+
+        @media(max-width:992px){text-align: center;  }
+
+        .projects__heading{
+            font-weight: 600;
+            font-size: 42px;
+            margin-bottom: 20px;
+
+            @media(max-width:992px){
+                font-size: 32px;
+                max-width: 250px;
+                margin:0 auto 20px;
+            }
+        }
+
+        .projects__p{
+            font-weight: 300;
+            max-width:870px;
+            margin-left: auto;
+
+            @media(max-width:992px){
+               margin: auto;
+               width: 280px;
+            }
+        }
+    }
+
+    &__wrapper{
+        @include flex(space-between, stretch, wrap);
+        row-gap: 150px;
+        margin-top: 50px;
+        position: relative;
+
+        @media(max-width:1200px){row-gap: 50px;}
+
+        .projects__item{
+            flex-basis: 30%;
+
+            @media(max-width:1200px){flex-basis: 45%;}
+            @media(max-width:768px){flex-basis: 100%;}
+
+            &.hidden{
+                @media(max-width:768px){display: none;}
+            }
+
+            .projects__name{
+                @include text(24px, 500, $white-color, uppercase);
+                margin-bottom: 20px;
+
+                span{color: $primary-color};
+
+                @media(max-width:768px){text-align: center;}
+            }
+
+            .projects__imgs{
+                height: 325px;
+                position: relative;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+
+                i{
+                    @include positioning(absolute, 50%, auto, auto, auto, 30px, 30px);
+                    border-radius: 50%;
+                    line-height: 30px;
+                    text-align: center;
+                    border: 2px solid $white-color;
+                    cursor: pointer;
+                    transition: 0.4s linear;
+
+                    &:hover{
+                        color: $primary-color;
+                        border-color: $primary-color;
+                    }
+                }
+
+                .projects__icon-right{right: 10px;}
+
+                .projects__icon-left{left: 10px;}
+            }
+
+            .projects__labels{
+                @include flex(flex-start, stretch, wrap, 10px);
+                margin-top: 20px;
+
+                @media(max-width:1200px){justify-content: center;}
+
+                .projects__label{
+                    text-transform: capitalize;
+                    font-size: 13px;
+                    border-radius: 51px;
+                    padding: 10px;
+                    border: 0.8px solid rgba(255, 255, 255, 0.3)
+                }
+            }
+        }
+
+        .projects__color{
+            @include positioning(absolute, 50%, 0, auto, auto, 200px);
+
+            @media(max-width: 1200px){display: none;}
+        }
+    }
+
+    &__btn{
+        margin:30px auto 0;
+        display: block;
+        width: 180px;
+        text-align: center;
+    }
+}
+
+
+
+
+
 /*----------------------------------
 # VISION section
 ----------------------------------*/ 
@@ -90,7 +220,7 @@
      text-align: center;
      padding: 100px 0;
 
-     @media(max-width:1200px){margin: 70px 0;}
+     @media(max-width:1200px){margin: 70px auto;}
 
      &__heading{
         font-weight: 600;
@@ -116,9 +246,11 @@
      }
 
      &__img{
-        opacity: 0.6;
-        width: 200px;
-        height: 120px;
+        opacity: 0.2;
+        width: 300px;
+        margin: 20px 0;
+
+        @media(max-width:992px){width: 200px;}
      }
 
      &__brush{

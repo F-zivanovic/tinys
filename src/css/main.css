@@ -179,20 +179,20 @@ section {
 
 @keyframes arrow-down {
   0% {
-    transform: translateY(20px);
+    bottom: 40px;
   }
   50% {
-    transform: translateY(0px);
+    bottom: 70px;
   }
   100% {
-    transform: translateY(20px);
+    bottom: 40px;
   }
 }
 #arrow {
   position: absolute;
   top: auto;
   right: auto;
-  bottom: 80px;
+  bottom: 40px;
   left: 50%;
   width: auto;
   height: auto;
@@ -539,9 +539,11 @@ section {
   text-transform: none;
   text-align: center;
 }
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .faq__heading {
     font-size: 24px;
+    max-width: 250px;
+    margin: auto;
   }
 }
 .faq__wrapper {
@@ -570,11 +572,6 @@ section {
     flex-basis: 100%;
   }
 }
-.faq__wrapper .faq__item:hover {
-  background-color: #fff;
-  color: #000;
-  transition: 0.4s linear;
-}
 .faq__wrapper .faq__item.active {
   background-color: #fff;
   color: #000;
@@ -596,19 +593,22 @@ section {
 }
 .faq__wrapper .faq__item .faq__header i {
   font-size: 15px;
+  transition: 0.4s linear;
 }
 .faq__wrapper .faq__item .faq__header i.active {
   transform: rotate(90deg);
   color: #000;
+  transition: 0.4s linear;
 }
 .faq__wrapper .faq__item .faq__body {
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   font-size: 14px;
   font-weight: 300;
+  transition: 0.4s linear;
 }
 .faq__wrapper .faq__item .faq__body.active {
-  height: initial;
+  max-height: 200px;
 }
 
 .footer {
@@ -1129,12 +1129,13 @@ section {
 @media (max-width: 1200px) {
   .header__text .header__heading {
     text-align: center;
+    max-width: 650px;
+    margin: auto;
   }
 }
 @media (max-width: 768px) {
   .header__text .header__heading {
     font-size: 28px;
-    margin: auto;
     width: 350px;
   }
 }
@@ -1240,9 +1241,6 @@ section {
   }
 }
 
-/*---------------------------------
-# HEADER section
-----------------------------------*/
 .header-a {
   position: relative;
   height: 100svh;
@@ -1294,9 +1292,6 @@ section {
   }
 }
 
-/*---------------------------------
-# INFO section
-----------------------------------*/
 .info {
   display: flex;
   justify-content: space-between;
@@ -1379,7 +1374,7 @@ section {
   gap: 1rem;
   position: relative;
   padding: 0 32px;
-  flex: 0 0 20%;
+  flex-basis: 20%;
 }
 @media (max-width: 576px) {
   .info__item--flex {
@@ -1443,9 +1438,6 @@ section {
   font-weight: 500;
 }
 
-/*---------------------------------
-# ABOUT section
-----------------------------------*/
 .about {
   background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../../src/img/3d-house-model-with-modern-architecture.jpg");
   background-size: cover;
@@ -1514,9 +1506,6 @@ section {
   }
 }
 
-/*---------------------------------
-# OFFER section
-----------------------------------*/
 .offer {
   display: flex;
   justify-content: flex-start;
@@ -1638,9 +1627,6 @@ section {
   color: #fff;
 }
 
-/*---------------------------
-# BLOG section
----------------------------*/
 @media (max-width: 768px) {
   .blog-posts__item.hidden {
     display: none;
@@ -1680,7 +1666,7 @@ section {
   align-items: flex-start;
   flex-flow: column;
   gap: 0;
-  height: 100vh;
+  height: 100%;
 }
 @media (max-width: 992px) {
   .header-p .header__wrapper {
@@ -1764,6 +1750,165 @@ section {
 }
 
 /*----------------------------------
+# PROJECTS section
+----------------------------------*/
+.projects__header {
+  text-align: right;
+}
+@media (max-width: 992px) {
+  .projects__header {
+    text-align: center;
+  }
+}
+.projects__header .projects__heading {
+  font-weight: 600;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .projects__header .projects__heading {
+    font-size: 32px;
+    max-width: 250px;
+    margin: 0 auto 20px;
+  }
+}
+.projects__header .projects__p {
+  font-weight: 300;
+  max-width: 870px;
+  margin-left: auto;
+}
+@media (max-width: 992px) {
+  .projects__header .projects__p {
+    margin: auto;
+    width: 280px;
+  }
+}
+.projects__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-flow: wrap;
+  gap: 0;
+  row-gap: 150px;
+  margin-top: 50px;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .projects__wrapper {
+    row-gap: 50px;
+  }
+}
+.projects__wrapper .projects__item {
+  flex-basis: 30%;
+}
+@media (max-width: 1200px) {
+  .projects__wrapper .projects__item {
+    flex-basis: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .projects__wrapper .projects__item {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .projects__wrapper .projects__item.hidden {
+    display: none;
+  }
+}
+.projects__wrapper .projects__item .projects__name {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.projects__wrapper .projects__item .projects__name span {
+  color: #FF1500;
+}
+@media (max-width: 768px) {
+  .projects__wrapper .projects__item .projects__name {
+    text-align: center;
+  }
+}
+.projects__wrapper .projects__item .projects__imgs {
+  height: 325px;
+  position: relative;
+}
+.projects__wrapper .projects__item .projects__imgs img {
+  height: 100%;
+  width: 100%;
+}
+.projects__wrapper .projects__item .projects__imgs i {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+.projects__wrapper .projects__item .projects__imgs i:hover {
+  color: #FF1500;
+  border-color: #FF1500;
+}
+.projects__wrapper .projects__item .projects__imgs .projects__icon-right {
+  right: 10px;
+}
+.projects__wrapper .projects__item .projects__imgs .projects__icon-left {
+  left: 10px;
+}
+.projects__wrapper .projects__item .projects__labels {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-flow: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+@media (max-width: 1200px) {
+  .projects__wrapper .projects__item .projects__labels {
+    justify-content: center;
+  }
+}
+.projects__wrapper .projects__item .projects__labels .projects__label {
+  text-transform: capitalize;
+  font-size: 13px;
+  border-radius: 51px;
+  padding: 10px;
+  border: 0.8px solid rgba(255, 255, 255, 0.3);
+}
+.projects__wrapper .projects__color {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  width: 200px;
+  height: auto;
+  transform: translateY(-50%);
+}
+@media (max-width: 1200px) {
+  .projects__wrapper .projects__color {
+    display: none;
+  }
+}
+.projects__btn {
+  margin: 30px auto 0;
+  display: block;
+  width: 180px;
+  text-align: center;
+}
+
+/*----------------------------------
 # VISION section
 ----------------------------------*/
 .vision {
@@ -1783,7 +1928,7 @@ section {
 }
 @media (max-width: 1200px) {
   .vision {
-    margin: 70px 0;
+    margin: 70px auto;
   }
 }
 .vision__heading {
@@ -1814,9 +1959,14 @@ section {
   }
 }
 .vision__img {
-  opacity: 0.6;
-  width: 200px;
-  height: 120px;
+  opacity: 0.2;
+  width: 300px;
+  margin: 20px 0;
+}
+@media (max-width: 992px) {
+  .vision__img {
+    width: 200px;
+  }
 }
 .vision__brush {
   position: absolute;
@@ -1914,6 +2064,7 @@ section {
   .header-s .header__item--img {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 38.75%, rgba(255, 21, 0, 0.8) 753.46%), url("../../src/img/plasterboard-worker-installs-plasterboard-wall-kitchen-cabinets.jpg");
     background-size: cover;
+    height: 100%;
   }
 }
 .header-s .header__item--img * {
