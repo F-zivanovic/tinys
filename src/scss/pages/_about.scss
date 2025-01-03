@@ -2,8 +2,6 @@
 
 
 
-
-
 // ==========================================================================
 // HEADER section
 // ==========================================================================
@@ -18,7 +16,7 @@
         @include flex(center, flex-start, column);
         height: 100%;
 
-        @media(max-width:992px){
+        @include rwd(992){
             align-items: center;
             text-align: center;
         }
@@ -27,27 +25,25 @@
             @extend %header-heading;
             max-width: 750px;
             
-            @media(max-width:992px){
+            @include rwd(992){
                 font-size: 28px;
                 text-align: center;
                 width: 400px;
             }
             
-            @media(max-width:576px){
-                max-width: 100%;
-            }
+            @include rwd(576){ max-width: 100%;}
         }
     
         .header__p{
             @extend %header-paragraph;
             max-width: 720px;
     
-            @media(max-width:992px){
+            @include rwd(992){
                 text-align: center;
                 width: 350px;
             }
         
-            @media(max-width:576px){ max-width: 100%; }
+            @include rwd(576){ max-width: 100%; }
         }
     }
 }
@@ -69,29 +65,24 @@
     }
 
     &__item{
-        flex: 0 0 30%;
-       
-        @media(max-width:1200px){flex: 0 0 80%;}
-
-        @media(max-width:576px){ flex: 0 0 100%;}
+        @include rwd(1200){flex-basis:80%;}
+        @include rwd(576){ flex-basis:100%;}
+        flex-basis:30%;
 
         &.section-header{
+            @include rwd(1200){ text-align: center; }
             text-align: left;
-
-            @media(max-width:1200px){text-align: center;}
 
             .section-subtitle{
                 text-transform: uppercase;
     
-                @media(max-width:1200px){
+                @include rwd(1200){
                     width: 350px;
                     margin: auto;
                     margin-top: 16px;
                 }
 
-                @media(max-width:400px){
-                    width: 100%;
-                }
+                @include rwd(400){ width: 100%;}
             }
         }
 
@@ -99,16 +90,13 @@
             @include text(14px, 300, $white-color);
             text-align: left;
 
-            @media(max-width:1200px){text-align: center;}
-            @media(max-width:768px){
+            @include rwd(1200){ text-align: center; }
+            @include rwd(768){
                 width: 300px;
                 margin: auto;
             }
 
-            @media(max-width:400px){
-                width: 100%;
-            }
-           
+            @include rwd(400){ width: 100%; }
         }
     }
 
@@ -118,7 +106,7 @@
         padding: 0 32px;
         flex-basis:20%;
         
-        @media(max-width:576px){
+        @include rwd(576){
             flex-basis: 300px;
             justify-content: center;
         }
@@ -171,8 +159,7 @@
 
         .info__number{
             @include text(78px, 700, $primary-color);
-
-            @media(max-width:576px){
+            @include rwd(576){
                 font-weight: 500;
                 font-size: 68px;
             }
@@ -209,10 +196,9 @@
         }
 
         .about__item{
-            flex: 0 0 30%;
+            @include rwd(1200){ flex-basis:100%; }
+            flex-basis:30%;
             text-align: center;
-
-            @media(max-width:1200px){flex: 0 0 100%;}
 
             img{width: 30px;}
 
@@ -223,12 +209,10 @@
 
             .about__desc{
                 @include text(14px, 300, $white-color, none, center);
+                @include rwd(1200){ width: 300px; }
+                @include rwd(400){ width: 100%; }
                 width: 250px;
                 margin: auto;
-
-                @media(max-width:1200px){width: 300px;}
-                @media(max-width:576px){font-size: 12px;}
-                @media(max-width:400px){width: 100%;}
             }
         }
     }
@@ -243,9 +227,8 @@
 // ==========================================================================
 .offer{
     @include flex;
+    @include rwd(992){ flex-direction: column; }
     position: relative;
-
-    @media(max-width:992px){flex-direction: column;}
 
     &__item{
         flex: 1;
@@ -255,11 +238,13 @@
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
 
-            @media(max-width:992px){
+            @include rwd(992){
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
+                height: 400px;
+                width: 100%;
             }
         }
     }
@@ -271,35 +256,31 @@
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
 
-        @media(max-width:992px){
+        @include rwd(992){
             align-items: center;
             padding: 2rem;
             border-bottom-left-radius:0;
             border-top-right-radius: 15px;
         }
 
-        @media(max-width:576px){padding:1.5rem;}
+        @include rwd(576){ padding:1.5rem; }
 
         .section-header{
             @include section-header(left);
 
             .section-title{
-                @media(max-width:992px){
-                    text-align: center;
-                }
+                @include rwd(992){ text-align: center;}
             }
 
             .section-subtitle{
-                @media(max-width:992px){
+                @include rwd(992){
                     font-size: 21px;
                     margin: auto;
                     text-align: center;
                     max-width: 300px;
                 }
 
-                @media(max-width: 400px){
-                    width: 100%;
-                }
+                @include rwd(400){width: 100%;}
             }
         }
         
@@ -309,54 +290,13 @@
             font-size: 14px;
             width: 420px;
 
-            @media(max-width:992px){
+            @include rwd(992){
                 text-align: center;
                 margin: 1.5rem auto 48px;
                 width: 280px;
             }
 
-            @media(max-width: 400px){
-                width: 100%;
-            }
-        }
-
-        .button-outline{
-            @media(max-width:992px){margin: auto;}
-
-            &:hover{
-                color: $white-color;
-            }
-
-            &:hover > i{
-                color: $white-color;
-            }
-        }
-    }
-}
-
-
-
-
-
-// ==========================================================================
-// Blog section
-// ==========================================================================
-.blog-posts{
-
-    &__item{
-        &.hidden{
-            @media(max-width:768px){display: none;}
-        }
-    }
-
-    &__btn{
-        display: none;
-
-        @media(max-width:768px){
-            display: block;
-            margin: 32px auto 0;
-            width: 150px;
-            text-align: center;
+            @include rwd(400){ width: 100%; }
         }
     }
 }

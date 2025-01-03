@@ -14,22 +14,18 @@
 }
 
 body{
+    @include rwd(576){ font-size: 85%; }
     font-size: 100%;
     overflow-x: hidden;
     line-height: 1.4;
     color: $white-color;
     background-color: $secondary-color;
     font-family: $font-family;
-
-
-    @media (max-width:576px) {
-        font-size: 85%;
-    }
 }
 
 a{
     transition: 0.4s linear;
-    color: #fff;
+    color: $white-color;
 
     &:hover{color: $primary-color;}
 }

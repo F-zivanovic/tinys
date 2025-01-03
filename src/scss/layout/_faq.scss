@@ -1,10 +1,12 @@
 @use '../abstract/index' as *;
 
+
+
 .faq{
+
     &__heading{
         @include text(37px, 600, $white-color, none, center);
-
-        @media(max-width:992px){
+        @include rwd(992px){
             font-size: 24px;
             max-width: 250px;
             margin: auto;
@@ -12,20 +14,19 @@
     }
 
    &__wrapper{
-        @include flex(space-between, flex-start, wrap, 16px);
+        @include flex(space-between, stretch, wrap, 16px);
+        @include rwd(768){padding: 16px;}
         margin-top: 48px;
         padding: 32px;
         background-color: $black-color;
         border-radius: 15px;
-
-        @media(max-width:768px){padding: 16px;}
 
         .faq__item{
             flex-basis: 47%;
             padding: 25px;
             border-radius: 10px;
 
-            @media(max-width:1200px){flex-basis: 100%;}
+            @include rwd(1200){ flex-basis: 100%; }
 
             // &:hover{
             //     background-color: $white-color;
@@ -40,10 +41,9 @@
 
             .faq__header{
                 @include flex(space-between, center);
+                @include rwd(576p){ font-size: 14px; }
 
                 .faq__question{font-weight: 600;}
-
-                @media(max-width:576px){font-size: 14px;}
 
                 i{
                     font-size: 15px;
@@ -52,7 +52,6 @@
                     &.active{
                         transform: rotate(90deg);
                         color: $black-color;
-                        transition: 0.4s linear;
                     }
                 }
             }
@@ -62,9 +61,11 @@
                 overflow: hidden;
                 font-size: 14px;
                 font-weight: 300;
-                transition: 0.4s linear;
 
-                &.active{max-height: 200px}
+                &.active{
+                    max-height: 200px;
+                    transition: 0.4s linear;
+                }
             }
         }
    }

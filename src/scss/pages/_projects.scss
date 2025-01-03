@@ -2,11 +2,9 @@
 
 
 
-
-
-/*----------------------------------
-# HEADER section
-----------------------------------*/ 
+// ==========================================================================
+// HEADER section
+// ==========================================================================
 .header-p{
     clip-path: polygon(0 1%, 100% 0%, 100% 75%, 0 100%);
     position: relative;
@@ -16,32 +14,28 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('../../src/img/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge.jpg');
 
-    @media(max-width:992px){
-        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-    }
+    @include rwd(992){ clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%); }
 
     .header__wrapper{
         @include flex(center, flex-start, column);
         height: 100%;
 
-        @media(max-width:992px){
+        @include rwd(992){
             align-items: center;
             text-align: center;
         }
     
         .header__heading{
             @extend %header-heading;
-            
-            @media(max-width:768px){font-size: 37px;}
-            @media(max-width:450px){font-size: 30px;}
+            @include rwd(768){ font-size: 37px; }
+            @include rwd(450){ font-size: 30px; }
         }
 
         .header__p{
             @extend %header-paragraph;
+            @include rwd(1200){ width: 350px; }
+            @include rwd(400){ width: 100%; }
             max-width: 650px;
-
-            @media(max-width:1200px){width: 350px;}
-            @media(max-width:400px){width: 100%;}
         }
     }
 
@@ -51,7 +45,7 @@
         background: rgba(255, 255, 255, 0.16);
         z-index: -1;
 
-        @media(max-width:992px){display: none;}
+        @include rwd(992){ display: none; }
     }
 
     .header__triangle-two{
@@ -60,7 +54,7 @@
         background: rgba(0, 0, 0, 0.16);
         z-index: -1;
 
-        @media(max-width:992px){display: none;}
+        @include rwd(992){ display: none; }
 
     }
 
@@ -70,7 +64,7 @@
         background: rgba(255, 21, 0, 0.16);
         z-index: -1;
 
-        @media(max-width:992px){display: none;}
+        @include rwd(992){ display: none; }
 
     }
 
@@ -80,22 +74,21 @@
 
 
 
-/*----------------------------------
-# PROJECTS section
-----------------------------------*/ 
+// ==========================================================================
+// PROJECTS section
+// ==========================================================================
 .projects{
     
     &__header{
+        @include rwd(992){text-align: center;}
         text-align: right;
-
-        @media(max-width:992px){text-align: center;  }
 
         .projects__heading{
             font-weight: 600;
             font-size: 42px;
             margin-bottom: 20px;
 
-            @media(max-width:992px){
+            @include rwd(992){
                 font-size: 32px;
                 max-width: 250px;
                 margin:0 auto 20px;
@@ -107,7 +100,7 @@
             max-width:870px;
             margin-left: auto;
 
-            @media(max-width:992px){
+            @include rwd(992){
                margin: auto;
                width: 280px;
             }
@@ -116,29 +109,26 @@
 
     &__wrapper{
         @include flex(space-between, stretch, wrap);
+        @include rwd(1200px){ row-gap: 50px; }
         row-gap: 150px;
         margin-top: 50px;
         position: relative;
 
-        @media(max-width:1200px){row-gap: 50px;}
-
         .projects__item{
+            @include rwd(1200){ flex-basis: 45%; }
+            @include rwd(768){ flex-basis: 100%; }
             flex-basis: 30%;
 
-            @media(max-width:1200px){flex-basis: 45%;}
-            @media(max-width:768px){flex-basis: 100%;}
-
             &.hidden{
-                @media(max-width:768px){display: none;}
+                @include rwd(768){ display: none; }
             }
 
             .projects__name{
                 @include text(24px, 500, $white-color, uppercase);
+                @include rwd(768){ text-align: center; }
                 margin-bottom: 20px;
 
                 span{color: $primary-color};
-
-                @media(max-width:768px){text-align: center;}
             }
 
             .projects__imgs{
@@ -172,9 +162,8 @@
 
             .projects__labels{
                 @include flex(flex-start, stretch, wrap, 10px);
+                @include rwd(1200){ justify-content: center; }
                 margin-top: 20px;
-
-                @media(max-width:1200px){justify-content: center;}
 
                 .projects__label{
                     text-transform: capitalize;
@@ -188,16 +177,13 @@
 
         .projects__color{
             @include positioning(absolute, 50%, 0, auto, auto, 200px);
-
-            @media(max-width: 1200px){display: none;}
+            @include rwd(1200){ display: none; }
         }
     }
 
     &__btn{
         margin:30px auto 0;
         display: block;
-        width: 180px;
-        text-align: center;
     }
 }
 
@@ -205,11 +191,12 @@
 
 
 
-/*----------------------------------
-# VISION section
-----------------------------------*/ 
+// ==========================================================================
+// VISION section
+// ==========================================================================
 .vision{
     @include flex(center, center, column, 16px);
+    @include rwd(1200){ margin: 70px auto; }
     position: relative;
     margin: 70px auto 150px;
     background-image:linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
@@ -220,7 +207,6 @@
      text-align: center;
      padding: 100px 0;
 
-     @media(max-width:1200px){margin: 70px auto;}
 
      &__heading{
         font-weight: 600;
@@ -228,7 +214,7 @@
         
         span{color: $primary-color;}
 
-        @media(max-width: 992px){
+        @include rwd(992){
             font-size: 24px;
             width: 230px;
         }
@@ -237,26 +223,24 @@
      &__p{
         font-weight: 300;
 
-        @media(max-width: 992px){width: 350px;}
+        @include rwd(992){ width: 350px; }
 
-        @media(max-width: 576px){
+        @include rwd(576){
             font-size: 14px;
             max-width: 100%;
         }
      }
 
      &__img{
+        @include rwd(992){ width: 200px; }
         opacity: 0.2;
         width: 300px;
         margin: 20px 0;
-
-        @media(max-width:992px){width: 200px;}
      }
 
      &__brush{
         @include positioning(absolute, auto, auto, -340px, -170px, 300px);
+        @include rwd(1200) {display: none; }
         opacity: 0.2;
-
-        @media(max-width: 1200px){display: none;}
      }
 }

@@ -1,6 +1,7 @@
 @use '../abstract/index' as *;
 
 
+
 .contact{
     text-align: center;
     margin: 150px 0;
@@ -10,18 +11,17 @@
     @media(max-width:992px){ margin-bottom: 50px}
 
     &__heading{
-        font-weight: 600;
-        font-size: 40px;
-        margin-bottom: 1rem;
+        @include text(40px, 600, $white-color, capitalize, center);
+        margin-bottom: 16px;
 
-        @media(max-width:992px){
+        @include rwd(992){
             font-size: 32px;
             text-transform: uppercase;
             width: 300px;
             margin: auto;
         }
 
-        @media(max-width:400px){width: 100%;}
+        @include rwd(400){width: 100%;}
     }
     
     &__desc{
@@ -30,20 +30,18 @@
         margin: auto;
         max-width: 770px;
 
-        @media(max-width:992px){
+        @include rwd(992){
             font-size: 15px;
             max-width: 300px;
             margin-top: 20px;
         }
 
-        @media(max-width:400px){width: 100%;}
+        @include rwd(400){width: 100%;}
     }
 
     &__key{
         @include positioning(absolute, 20px, auto, 0, -42px, 300px);
+        @include rwd(992){ display: none; }
         opacity: 0.05;
-
-        @media(max-width:992px){display: none;}
-
     }
 }

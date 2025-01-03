@@ -90,7 +90,6 @@ faqItems.forEach(item=>{
 
 
 
-// 
  
 
 

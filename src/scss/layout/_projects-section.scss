@@ -1,26 +1,26 @@
 @use '../abstract/index' as *;
 
+
+
 .projects-s{
     position: relative;
 
     .section-subtitle{
 
-        @media(max-width:768px){
+        @include rwd(768){
             width: 350px;
             margin:16px auto 0;
         }
 
-        @media(max-width:576px){width: 270px;}
+        @include rwd(576){width: 270px;}
     }
 
     .projects__desc{
+        @include rwd(768){ width: 300px; }
+        @include rwd(400){ width: 100%; }
         max-width: 900px;
         margin: 20px auto 0;
         font-size: 15px;
-
-        @media(max-width:768px){width: 300px;}
-
-        @media(max-width:400px){width: 100%;}
     }
     
     .projects__wrapper{
@@ -29,14 +29,13 @@
         row-gap: 32px;
         
         .projects__item{    
+            @include rwd(1200){flex-basis:47%;}
             flex-basis: 30%;
             position: relative;
             overflow: hidden;
             height: 200px;
 
-            @media(max-width:1200px){flex-basis:47%;}
-
-            @media(max-width:768px){
+            @include rwd(768){
                 flex-basis: 100%;
                 height: 300px;
             }
@@ -66,19 +65,17 @@
         }
 
         .projects__item--hidden{
-            @media(max-width:768px){display: none;}
+            @include rwd(768){ display: none; }
         }
     }
 
     .projects__drill{
         @include positioning(absolute, 50px, auto, auto, -100px, 300px);
-
-        @media(max-width:1200px){display: none;}
+        @include rwd(1200){ display: none; }
     }
 
     .projects__hammer{
         @include positioning(absolute, auto, -120px, -100px, auto, 250px);
-
-        @media(max-width:1200px){display: none;}
+        @include rwd(1200){ display: none; }
     }
 }

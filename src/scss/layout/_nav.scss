@@ -1,8 +1,11 @@
 @use '../abstract/index' as *;
 
+
+
 .nav{
     @include positioning(fixed, 0, auto, auto, 0, 100%);
     @include flex(space-between, center);
+    @include rwd(576){ padding:0 32px; }
     background: transparent;
     padding: 0 60px;
     z-index: 999;
@@ -10,22 +13,18 @@
 
     &.scrolled{background-color: $black-color;}
 
-    @media(max-width:576px){padding:0 32px;}
-
     &__logo{
-
-        @media(max-width:1200px){order: 2;}
+        @include rwd(1200){ order: 2; }
 
         &-desktop{
+            @include rwd(1200){ display: none; }
             width: 120px;
-
-            @media(max-width:1200px){display: none;}
         }
 
         &-mobile{
             display: none;
 
-            @media(max-width:1200px){
+            @include rwd(1200){
                 width: 80px;
                 display: block;
             }
@@ -34,6 +33,7 @@
 
     &__list{
         @include flex(flex-start, center, nowrap, 32px);
+        @include rwd(1200){ display: none; }
 
         .nav__link{
             @include text(14px, 500, $white-color, uppercase);
@@ -41,7 +41,11 @@
             &:hover{color: $primary-color;}
         }
 
-        @media(max-width:1200px){display: none;}
+        .nav__link--btn{
+            text-align: center;
+
+            &:hover{ color: $white-color; }
+        }
     }
 
     &__hamburger{
@@ -59,9 +63,9 @@
 
         .hamburger__line--mid{width: 80%;}
 
-        @media(max-width:1200px){display: flex;}
+        @include rwd(1200){ display: flex; }
 
-        @media(max-width:576px){
+        @include rwd(576){
             width: 30px;
             height: 20px;
         }

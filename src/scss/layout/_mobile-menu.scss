@@ -1,5 +1,7 @@
 @use '../abstract/index' as *;
 
+
+
 .mobile{
     @include positioning(fixed, 0, auto, 0, 0, 50%);
     @include flex(center, center, column, 32px);

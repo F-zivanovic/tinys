@@ -2,11 +2,9 @@
 
 
 
-
-
-/*---------------------------
-# HEADER section
----------------------------*/
+// ==========================================================================
+// HEADER section
+// ==========================================================================
 .header-s{
     height: 100svh;
     position: relative;
@@ -15,7 +13,7 @@
     .header__item{
         padding-left: 100px;
 
-        @media(max-width:1200px){ 
+        @include rwd(1200){ 
             @include flex(center, center, column);
             padding: 0 10%;
             text-align: center;
@@ -25,12 +23,12 @@
             @extend %header-heading;
             max-width: 650px;
 
-            @media(max-width:992px){
+            @include rwd(992){
                 font-size: 32px;
                 max-width: 370px;
             }
 
-            @media(max-width:450px){
+            @include rwd(450){
                 font-size: 28px;
                 max-width: 100%;
             }
@@ -40,7 +38,7 @@
             @extend %header-paragraph;
             max-width: 600px;
 
-            @media(max-width:992px){
+            @include rwd(992){
                 font-size: 16px;
                 max-width: 350px;
             }
@@ -50,7 +48,7 @@
             display: flex;
             gap: 1rem;
 
-            @media(max-width:992px){
+            @include rwd(992){
                 flex-direction: column;
                 gap: 2rem;
             }
@@ -59,10 +57,9 @@
 
     .header__item--bg{
         @include flex(center, stretch, column);
+        @include rwd(1200){ display: none; }
         flex: 1.3;
         background: linear-gradient(270deg, rgba(0, 0, 0, 0.7) 58.49%, rgba(255, 21, 0, 0.7) 194.03%);
-
-        @media(max-width:1200px){ display: none;}
     }
 
     .header__item--img{
@@ -72,7 +69,7 @@
         background-size: cover;
         height: 100vh;
 
-        @media(max-width:1200px){
+        @include rwd(1200){
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 38.75%, rgba(255, 21, 0, 0.8) 753.46%),
             url('../../src/img/plasterboard-worker-installs-plasterboard-wall-kitchen-cabinets.jpg');
             background-size: cover;
@@ -80,9 +77,8 @@
         }
 
         & *{
+            @include rwd(1200){ display: block;}
             display: none;
-
-            @media(max-width:1200px){ display: block;}
         }
     }
 }
@@ -91,20 +87,18 @@
 
 
 
-/*---------------------------
-# SERVICES section
----------------------------*/
+// ==========================================================================
+// SERVICES section
+// ==========================================================================
 .services{
+    @include rwd(768){ width: 90%; }
     width: 70%;
     margin: auto;
-
-    @media(max-width:768px){width: 90%;}
  
     &__header{
         @include section-header(center, uppercase, 576px, 32px);
+        @include rwd(1200){display: block;}
         display: none;
-
-        @media(max-width:1200px){display: block;}
         
         &-p{
             font-weight: 300;
@@ -125,48 +119,34 @@
             flex-basis:33%;
             padding: 32px;
     
-            @media(max-width:1200px){flex-basis: 50%;}
+            @include rwd(1200){flex-basis: 50%;}
 
-            @media(max-width:576px){
+            @include rwd(576){
                 padding: 32px 16px;
-                // flex-basis: 100%;
             }
     
             &:nth-child(1){
-                @media(max-width:1200px){
-                    display: none;
-                }
+                @include rwd(1200){ display: none; }
             }
     
             &:nth-child(2){
-                @media(max-width:1200px){
-                    order: -1;
-                }
+                @include rwd(1200){ order: -1; }
             }
     
             &:nth-child(3){
-                @media(max-width:1200px){
-                    order: 0;
-                }
+                @include rwd(1200){ order: 0; }
             }
     
             &:nth-child(4){
-                @media(max-width:1200px){
-                    order: 2;
-                }
+                @include rwd(1200){ order: 2; }
             }
     
             &:nth-child(5){
-                @media(max-width:1200px){
-                    order: 1;
-                }
+                @include rwd(1200){ order: 1; }
             }
     
             &:nth-child(6){
-                @media(max-width:1200px){
-                    order: 3;
-
-                }
+                @include rwd(1200){ order: 3; }
             }
     
             .services__heading{
@@ -198,7 +178,7 @@
                 @include text(24px, 500, $white-color);
                 margin: 100px 0 40px;
 
-                @media(max-width:1200px){
+                @include rwd(1200){
                     font-size: 14px;
                     margin: 32px 0 16px;
                 }
@@ -206,8 +186,7 @@
     
             .services__desc{
                 @include text(14px, 300,  rgba(220, 220, 220, 1));
-
-                @media(max-width:1200px){font-size: 12px;}
+                @include rwd(1200){ font-size: 12px; }
             }
         }
     
@@ -217,33 +196,6 @@
             .services__img{
                 box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
             }
-        }
-    }
-}
-
-
-
-
-
-/*---------------------------
-# BLOG section
----------------------------*/
-.blog-posts{
-
-    &__item{
-        &.hidden{
-            @media(max-width:768px){display: none;}
-        }
-    }
-
-    &__btn{
-        display: none;
-
-        @media(max-width:768px){
-            display: block;
-            margin: 32px auto 0;
-            width: 150px;
-            text-align: center;
         }
     }
 }

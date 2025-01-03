@@ -36,32 +36,7 @@
 }
 
 @mixin rwd($pixels, $type:max){
-
-    @if $pixels == 576 {
-        @media(#{$type}-width: #{$pixels}px) {
-            @content;
-        }
-    }
-
-    @if $pixels == 768 {
-        @media(#{$type}-width: #{$pixels}px) {
-            @content;
-        }
-    }
-
-    @if $pixels == 992 {
-        @media(#{$type}-width: #{$pixels}px) {
-            @content;
-        }
-    }
-
-    @if $pixels == 1200 {
-        @media(#{$type}-width: #{$pixels}px) {
-            @content;
-        }
-    }
-
-    @else{
+    @media(#{$type}-width: #{$pixels}px) {
         @content;
     }
 }
@@ -80,10 +55,6 @@
         font-weight: 700;
         font-size: 32px;
         text-transform: $text-transform;
-        margin-top: 16px;
-
-        @media(max-width:$bp){font-size: $font-size;}
     }
 }
-// ? da li staviti ovaj mixin kao komponentu
 
