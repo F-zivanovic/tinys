@@ -3,7 +3,7 @@
 
 
 .mobile{
-    @include positioning(fixed, 0, auto, 0, 0, 50%);
+    @include positioning(fixed, 0, auto, 0, 0, 65%);
     @include flex(center, center, column, 32px);
     background-color: $secondary-color;
     transform: translateX(-100%);

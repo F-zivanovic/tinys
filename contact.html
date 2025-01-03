@@ -77,8 +77,8 @@
 
     <div class="contact">
         <h1 class="contact__heading">How Can We Assist You?</h1>
-        <p class="contact__desc">Whether it’s upgrading your kitchen or modernizing your bathroom, our remodeling
-            services bring comfort, value, and joy to your everyday living.</p>
+        <p class="contact__desc">We’d love to hear from you! Whether you have a question, need help, or just want to
+            share your thoughts, feel free to reach out. Our team is here to listen and assist you!</p>
         <img src="src/img/key.png" class="contact__key" alt="">
     </div>
 
@@ -107,25 +107,25 @@
             </a>
         </article>
 
-        <form class="contact-form__item contact-form__item--form">
+        <form class="contact-form__item contact-form__item--form" method="post" action="">
             <div class="contact-form__form-box">
                 <label for="name">first name</label>
-                <input type="text" id="name" placeholder="first name" required>
+                <input type="text" id="name" name="name" placeholder="first name" required>
             </div>
 
             <div class="contact-form__form-box">
                 <label for="surname">last name</label>
-                <input type="text" id="surname" placeholder="last name" required>
+                <input type="text" id="surname" name="surname" placeholder="last name" required>
             </div>
 
             <div class="contact-form__form-box">
                 <label for="email">email address</label>
-                <input type="email" id="email" placeholder="email" required>
+                <input type="email" id="email" name="email" placeholder="email" required>
             </div>
 
             <div class="contact-form__form-box">
                 <label for="message">reason for contact</label>
-                <textarea id="message" placeholder="message"></textarea>
+                <textarea id="message" name="message" placeholder="message"></textarea>
             </div>
 
             <button class="btn btn-primary">submit</button>

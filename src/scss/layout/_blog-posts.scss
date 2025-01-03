@@ -15,7 +15,7 @@
             flex-basis:31%;
 
             &.hidden{
-                @include rwd(768px){ display: none; }
+                @include rwd(768){ display: none; }
             }
 
             .blog-posts__body{

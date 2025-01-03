@@ -8,7 +8,8 @@
     box-shadow: 0px 0px 45.3px -3px rgba(255, 255, 255, 0.09);
     padding:70px 50px;
     border-radius: 30px;
-    margin-top: 100px;
+    margin-top: 90px;
+    margin-bottom: 90px;
 
     @include rwd(1200){
         padding:70px 16px;
@@ -38,6 +39,8 @@
 
         .contact-form__link{
             display: block;
+            font-size: 17px;
+            font-weight: 500;
 
             &:not(:last-child){ margin-bottom: 16px; }
 
@@ -71,8 +74,12 @@
                 display: block;
                 width: 100%;
                 padding: 1rem;
+                font-size: 17px;
 
-                &::placeholder{ text-transform: capitalize; }
+                &::placeholder{ 
+                    text-transform: capitalize;
+                    font-size: 17px;
+                }
             }
 
             textarea{
@@ -80,11 +87,13 @@
                 height: 90px;
                 font-family: $font-family;
                 padding: 1rem;
+                border-radius: 5px;
+                font-size: 17px;
 
                 &::placeholder{
                     text-transform: capitalize;
-                    padding: 1rem;
                     font-family: $font-family;
+                    font-size: 17px;
                 }
             }
         }

@@ -180,6 +180,7 @@
     background-image:linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../../src/img/3d-house-model-with-modern-architecture.jpg');
     background-size: cover;
     border-radius: 15px;
+    margin: 70px auto;
 
     .section-subtitle{
         text-transform: uppercase;
@@ -252,18 +253,17 @@
     &__item--bg{
         @include flex(center, flex-start, column);
         background: #222222;
-        padding:3rem;
+        padding:48px;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
 
         @include rwd(992){
             align-items: center;
-            padding: 2rem;
             border-bottom-left-radius:0;
             border-top-right-radius: 15px;
         }
 
-        @include rwd(576){ padding:1.5rem; }
+        @include rwd(400){ padding: 48px 20px }
 
         .section-header{
             @include section-header(left);

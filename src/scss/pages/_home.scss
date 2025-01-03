@@ -85,10 +85,10 @@
        .header__heading{
             @extend %header-heading;
             text-align: left;
+            max-width: 650px;
 
             @include rwd(1200){
                 text-align: center;
-                max-width: 650px;
                 margin: auto;
             }
 

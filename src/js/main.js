@@ -97,14 +97,14 @@ let countingStarted  = false;
 function counting(number) {
     let target = parseInt(number.getAttribute('data-target'));
     let count = 0;
-    let speed = 20;
+    let speed = 15;
 
     let counting = setInterval(()=>{
         if(count <= target){
             count += Math.ceil(target / 100);;
             number.innerHTML = count;
         }else{
-            number.innerHTML = target;
+            number.innerHTML = `${target}+`;
             clearInterval(counting);
         }
     }, speed)

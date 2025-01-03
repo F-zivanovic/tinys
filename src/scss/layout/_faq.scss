@@ -26,6 +26,7 @@
             padding: 25px;
             border-radius: 10px;
 
+
             @include rwd(1200){ flex-basis: 100%; }
 
             // &:hover{
@@ -41,7 +42,7 @@
 
             .faq__header{
                 @include flex(space-between, center);
-                @include rwd(576p){ font-size: 14px; }
+                @include rwd(576p){ font-size: 14px; };
 
                 .faq__question{font-weight: 600;}
 
@@ -61,11 +62,14 @@
                 overflow: hidden;
                 font-size: 14px;
                 font-weight: 300;
-
-                &.active{
+                transition: 0.4s linear;
+        
+                &.active{ 
+                    border-top: 1px solid rgba(241, 241, 241, 1);
                     max-height: 200px;
-                    transition: 0.4s linear;
-                }
+                    margin-top: 20px;
+                    padding-top: 20px;
+                 }
             }
         }
    }

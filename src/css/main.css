@@ -54,7 +54,7 @@ img {
 }
 
 section {
-  padding: 70px 0;
+  padding: 90px 0;
 }
 
 .container {
@@ -319,7 +319,7 @@ section {
   right: auto;
   bottom: 0;
   left: 0;
-  width: 50%;
+  width: 65%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -393,7 +393,8 @@ section {
   box-shadow: 0px 0px 45.3px -3px rgba(255, 255, 255, 0.09);
   padding: 70px 50px;
   border-radius: 30px;
-  margin-top: 100px;
+  margin-top: 90px;
+  margin-bottom: 90px;
 }
 @media (max-width: 1200px) {
   .contact-form {
@@ -446,6 +447,8 @@ section {
 }
 .contact-form__item .contact-form__link {
   display: block;
+  font-size: 17px;
+  font-weight: 500;
 }
 .contact-form__item .contact-form__link:not(:last-child) {
   margin-bottom: 16px;
@@ -485,20 +488,24 @@ section {
   display: block;
   width: 100%;
   padding: 1rem;
+  font-size: 17px;
 }
 .contact-form__item--form .contact-form__form-box input::placeholder {
   text-transform: capitalize;
+  font-size: 17px;
 }
 .contact-form__item--form .contact-form__form-box textarea {
   width: 100%;
   height: 90px;
   font-family: "Inter", serif;
   padding: 1rem;
+  border-radius: 5px;
+  font-size: 17px;
 }
 .contact-form__item--form .contact-form__form-box textarea::placeholder {
   text-transform: capitalize;
-  padding: 1rem;
   font-family: "Inter", serif;
+  font-size: 17px;
 }
 .contact-form__item--form button {
   font-family: "Inter", serif;
@@ -577,10 +584,13 @@ section {
   overflow: hidden;
   font-size: 14px;
   font-weight: 300;
+  transition: 0.4s linear;
 }
 .faq__wrapper .faq__item .faq__body.active {
+  border-top: 1px solid rgb(241, 241, 241);
   max-height: 200px;
-  transition: 0.4s linear;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .footer {
@@ -823,7 +833,7 @@ section {
 }
 @media (max-width: 576px) {
   .projects-s .section-subtitle {
-    width: 270px;
+    width: 100%;
   }
 }
 .projects-s .projects__desc {
@@ -964,7 +974,7 @@ section {
     flex-basis: 100%;
   }
 }
-@media (max-width: 768pxpx) {
+@media (max-width: 768px) {
   .blog-posts__wrapper .blog-posts__item.hidden {
     display: none;
   }
@@ -1122,11 +1132,11 @@ section {
 }
 .header__text .header__heading {
   text-align: left;
+  max-width: 650px;
 }
 @media (max-width: 1200px) {
   .header__text .header__heading {
     text-align: center;
-    max-width: 650px;
     margin: auto;
   }
 }
@@ -1177,7 +1187,7 @@ section {
 
 .contact {
   text-align: center;
-  margin: 150px 0;
+  margin: 100px 0;
   position: relative;
   padding: 0 50px;
 }
@@ -1442,6 +1452,7 @@ section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../../src/img/3d-house-model-with-modern-architecture.jpg");
   background-size: cover;
   border-radius: 15px;
+  margin: 70px auto;
 }
 .about .section-subtitle {
   text-transform: uppercase;
@@ -1539,21 +1550,20 @@ section {
   flex-flow: column;
   gap: 0;
   background: #222222;
-  padding: 3rem;
+  padding: 48px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 @media (max-width: 992px) {
   .offer__item--bg {
     align-items: center;
-    padding: 2rem;
     border-bottom-left-radius: 0;
     border-top-right-radius: 15px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 400px) {
   .offer__item--bg {
-    padding: 1.5rem;
+    padding: 48px 20px;
   }
 }
 .offer__item--bg .section-header {
@@ -1709,6 +1719,9 @@ section {
   }
 }
 
+.projects {
+  position: relative;
+}
 .projects__header {
   text-align: right;
 }
@@ -1748,11 +1761,10 @@ section {
   gap: 0;
   row-gap: 150px;
   margin-top: 50px;
-  position: relative;
 }
-@media (max-width: 1200pxpx) {
+@media (max-width: 1200px) {
   .projects__wrapper {
-    row-gap: 50px;
+    row-gap: 70px;
   }
 }
 .projects__wrapper .projects__item {
@@ -1839,28 +1851,27 @@ section {
 .projects__wrapper .projects__item .projects__labels .projects__label {
   text-transform: capitalize;
   font-size: 13px;
-  border-radius: 51px;
-  padding: 10px;
+  border-radius: 50px;
+  padding: 10px 15px;
   border: 0.8px solid rgba(255, 255, 255, 0.3);
 }
-.projects__wrapper .projects__color {
+.projects__btn {
+  margin: 30px auto 0;
+  display: block;
+}
+.projects__color {
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 0;
   bottom: auto;
   left: auto;
   width: 200px;
   height: auto;
-  transform: translateY(-50%);
 }
 @media (max-width: 1200px) {
-  .projects__wrapper .projects__color {
+  .projects__color {
     display: none;
   }
-}
-.projects__btn {
-  margin: 30px auto 0;
-  display: block;
 }
 
 .vision {
@@ -1870,7 +1881,7 @@ section {
   flex-flow: column;
   gap: 16px;
   position: relative;
-  margin: 70px auto 150px;
+  margin: 90px auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url("../../src/img/professional-repairman-wearing-protective-gloves.jpg");
   background-size: cover;
   background-position: center;
@@ -1892,7 +1903,7 @@ section {
 }
 @media (max-width: 992px) {
   .vision__heading {
-    font-size: 24px;
+    font-size: 26px;
     width: 230px;
   }
 }
@@ -1911,8 +1922,8 @@ section {
   }
 }
 .vision__img {
-  opacity: 0.2;
-  width: 300px;
+  opacity: 0.05;
+  width: 350px;
   margin: 20px 0;
 }
 @media (max-width: 992px) {
@@ -1932,6 +1943,21 @@ section {
 }
 @media (max-width: 1200px) {
   .vision__brush {
+    display: none;
+  }
+}
+
+.projects__icon {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  bottom: auto;
+  left: atuo;
+  width: 120px;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .projects__icon {
     display: none;
   }
 }
