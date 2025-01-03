@@ -484,16 +484,16 @@ section {
   border-radius: 5px;
   display: block;
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 .contact-form__item--form .contact-form__form-box input::placeholder {
   text-transform: capitalize;
-  padding: 0 1rem;
 }
 .contact-form__item--form .contact-form__form-box textarea {
   width: 100%;
   height: 90px;
   font-family: "Inter", serif;
+  padding: 1rem;
 }
 .contact-form__item--form .contact-form__form-box textarea::placeholder {
   text-transform: capitalize;
