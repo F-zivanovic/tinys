@@ -21,6 +21,8 @@
         max-width: 900px;
         margin: 20px auto 0;
         font-size: 15px;
+        font-weight: 300;
+        line-height: 1.8;
     }
     
     .projects__wrapper{
@@ -68,6 +70,8 @@
             @include rwd(768){ display: none; }
         }
     }
+
+    .projects__cta{ text-align: center; }
 
     .projects__drill{
         @include positioning(absolute, 50px, auto, auto, -100px, 300px);

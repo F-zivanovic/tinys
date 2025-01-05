@@ -36,4 +36,7 @@ img{
     vertical-align: middle;
 }
 
-section{padding: 90px 0;}
+section{
+    @include rwd(576){ padding: 70px 0; }
+    padding: 90px 0;
+}

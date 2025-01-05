@@ -25,7 +25,7 @@
         .contact-form__heading{
             @include text(40px, 600, $white-color);
             @include rwd(1200){ text-align: center; }
-            @include rwd(576){ font-size: 32px; }
+            @include rwd(576){ font-size: 30px; }
             margin-bottom: 1.5rem;
         }
 
@@ -34,7 +34,10 @@
             @include rwd(576){ width: 100%; }
             color: rgba(230, 230, 230, 1);
             width: 400px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            font-weight: 300;
+
+            @include rwd(576){ margin-bottom: 50px; }
         }
 
         .contact-form__link{
@@ -56,6 +59,7 @@
     &__item--form{
         
         @include rwd(1200){ padding:0 20px }
+        @include rwd(576){ margin-top: 30px; }
         
         .contact-form__form-box{
 
@@ -74,11 +78,12 @@
                 display: block;
                 width: 100%;
                 padding: 1rem;
-                font-size: 17px;
+                font-size: 15px;
 
                 &::placeholder{ 
+                    @include rwd(576){ font-weight: 300;}
                     text-transform: capitalize;
-                    font-size: 17px;
+                    font-size: 15px;
                 }
             }
 
@@ -88,12 +93,13 @@
                 font-family: $font-family;
                 padding: 1rem;
                 border-radius: 5px;
-                font-size: 17px;
+                font-size: 15px;
 
                 &::placeholder{
+                    @include rwd(576){ font-weight: 4a00; }
                     text-transform: capitalize;
                     font-family: $font-family;
-                    font-size: 17px;
+                    font-size: 15px;
                 }
             }
         }

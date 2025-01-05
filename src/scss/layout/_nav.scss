@@ -7,18 +7,16 @@
     @include flex(space-between, center);
     @include rwd(576){ padding:0 32px; }
     background: transparent;
-    padding: 0 60px;
+    padding: 20px 60px;
     z-index: 999;
-    height: 10vh;
 
     &.scrolled{background-color: $black-color;}
 
     &__logo{
         @include rwd(1200){ order: 2; }
-
         &-desktop{
             @include rwd(1200){ display: none; }
-            width: 120px;
+            width: 200px;
         }
 
         &-mobile{
@@ -71,3 +69,5 @@
         }
     }
 }
+
+// TODO: active klasa na linkove u nav

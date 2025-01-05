@@ -86,7 +86,6 @@
 
 
 
-
 // ==========================================================================
 // SERVICES section
 // ==========================================================================
@@ -165,14 +164,17 @@
             }
     
             .services__img{
-                width: 55px;
-                height: 55px;
+                @include flex(center, center);
+                width: 60px;
+                height: 60px;
                 border-radius: 50%;
-                line-height: 55px;
+                line-height: 60px;
                 text-align: center;
                 box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
                 background: rgba(39, 39, 39, 1);
             }
+
+            svg{ fill: $primary-color; }
     
             .services__name{
                 @include text(24px, 500, $white-color);

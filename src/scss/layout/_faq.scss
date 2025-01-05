@@ -5,8 +5,8 @@
 .faq{
 
     &__heading{
-        @include text(37px, 600, $white-color, none, center);
-        @include rwd(992px){
+        @include text(32px, 600, $white-color, none, center);
+        @include rwd(992){
             font-size: 24px;
             max-width: 250px;
             margin: auto;

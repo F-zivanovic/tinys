@@ -5,6 +5,7 @@
 .numbers{
     @include flex(center, center, wrap);
     @include rwd(992){ row-gap: 64px; }
+    @include rwd(576){ scroll-margin-top: 80px; }
     position: relative;
 
     &__item{
@@ -31,6 +32,6 @@
     &__building{
         @include positioning(absolute, auto, auto, 0, -150px, 500px);
         @include rwd(992){ display: none; }
-        opacity: 1;
+    width: 400px;
     }
 }

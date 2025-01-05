@@ -3,9 +3,20 @@
 
 
 .blog-posts{
+    scroll-margin-top: 80px;
+
+    .section-header{
+        .section-subtitle{
+            @include rwd(576){
+                max-width: 100%;
+                font-size: 25px
+            }
+        }
+    }
 
     &__wrapper{
         @include flex(space-between, stretch, wrap);
+        @include rwd(576){ row-gap: 100px; }
         margin-top: 45px;
         row-gap: 150px;
 

@@ -7,6 +7,8 @@
     margin: 100px 0;
     position: relative;
     padding: 0 50px;
+    
+    @include rwd(576){ margin: 150px 0 100px;}
 
     @media(max-width:992px){ margin-bottom: 50px}
 
