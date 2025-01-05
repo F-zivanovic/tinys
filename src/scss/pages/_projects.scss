@@ -133,36 +133,41 @@
             }
 
             .projects__imgs{
-                height: 325px;
                 position: relative;
+                overflow: hidden;
 
-                img{
-                    height: 100%;
-                    width: 100%;
-                }
-
-                i{
-                    @include flex(center, center);
-                    @include positioning(absolute, 50%, auto, auto, auto);
-                    border-radius: 50%;
-                    line-height: 30px;
-                    width: 30px;
-                    height: 30px;
-                    text-align: center;
-                    border: 2px solid $white-color;
-                    cursor: pointer;
+                .projects__slides{
                     transition: 0.4s linear;
-                    font-size: 13px;
-
-                    &:hover{
-                        color: $primary-color;
-                        border-color: $primary-color;
+                    display: flex;
+    
+                    img{
+                        width: 100%;
+                        flex-shrink: 0;
                     }
                 }
 
-                .projects__icon-right{right: 10px;}
-
-                .projects__icon-left{left: 10px;}
+                .projects__btn{
+                        @include positioning(absolute, 50%, auto, auto, auto);
+                        transform: translateY(calc(-50% - 30px));
+                        border-radius: 50%;
+                        line-height: 30px;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        border: 2px solid $white-color;
+                        cursor: pointer;
+                        transition: 0.4s linear;
+                        font-size: 13px;
+    
+                        &:hover{
+                            color: $primary-color;
+                            border-color: $primary-color;
+                        }
+    
+                    &--right{ right: 10px; }
+    
+                    &--left{ left: 10px; }
+                }
             }
 
             .projects__labels{
@@ -191,6 +196,8 @@
         @include rwd(1200){ display: none; }
     }
 }
+
+
 
 
 

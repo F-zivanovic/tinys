@@ -112,12 +112,17 @@
         <!-- Main -->
         <div class="projects__wrapper">
 
-            <article class="projects__item">
+            <article class="projects__item" id="slider1">
                 <p class="projects__name">Stairs</p>
                 <div class="projects__imgs">
-                    <img src="src/img/projects/test.png" alt="">
-                    <i class="fa-solid fa-arrow-right projects__icon-right"></i>
-                    <i class="fa-solid fa-arrow-left projects__icon-left"></i>
+                    <div class="projects__slides">
+                        <img src="src/img/projects/stairs1.jpg" alt="">
+                        <img src="src/img/projects/stairs2.jpg" alt="">
+                    </div>
+                    <button class="projects__btn projects__btn--left"
+                        onclick="moveSlide(-1, 'slider1')">&#10094;</button>
+                    <button class="projects__btn projects__btn--right"
+                        onclick="moveSlide(1, 'slider1')">&#10095;</button>
                 </div>
                 <div class="projects__labels">
                     <span class="projects__label">carpet removal </span>
@@ -128,49 +133,65 @@
                 </div>
             </article>
 
-            <article class="projects__item">
+            <article class="projects__item" id="slider2">
                 <p class="projects__name">wood floor</p>
                 <div class="projects__imgs">
-                    <img src="src/img/projects/test.png" alt="">
-                    <i class="fa-solid fa-arrow-right projects__icon-right"></i>
-                    <i class="fa-solid fa-arrow-left projects__icon-left"></i>
+                    <div class="projects__slides">
+                        <img src="src/img/projects/Wood Floor Before1.jpg" alt="">
+                        <img src="src/img/projects/Wood Floor After2.jpg" alt="">
+                    </div>
+                    <button class="projects__btn projects__btn--left"
+                        onclick="moveSlide(-1, 'slider2')">&#10094;</button>
+                    <button class="projects__btn projects__btn--right"
+                        onclick="moveSlide(1, 'slider2')">&#10095;</button>
                 </div>
                 <div class="projects__labels">
                     <span class="projects__label">remove carpet </span>
                     <span class="projects__label">vinyl flooring </span>
                     <span class="projects__label">shoe molding</span>
-                    <span class="projects__label">baseboard installing</span>
+                    <span class="projects__label">baseboard installing </span>
                     <span class="projects__label">3-day job</span>
                     <span class="projects__label">1400 sqft</span>
                 </div>
             </article>
 
-            <article class="projects__item">
-                <p class="projects__name">Floor <span>&</span> Walls</p>
+            <article class="projects__item" id="slider3">
+                <p class="projects__name">floor <span>&</span> walls</p>
                 <div class="projects__imgs">
-                    <img src="src/img/projects/test.png" alt="">
-                    <i class="fa-solid fa-arrow-right projects__icon-right"></i>
-                    <i class="fa-solid fa-arrow-left projects__icon-left"></i>
+                    <div class="projects__slides">
+                        <img src="src/img/projects/Floor & Walls Before1.jpg" alt="">
+                        <img src="src/img/projects/Floor & Walls After2.jpg" alt="">
+                    </div>
+                    <button class="projects__btn projects__btn--left"
+                        onclick="moveSlide(-1, 'slider3')">&#10094;</button>
+                    <button class="projects__btn projects__btn--right"
+                        onclick="moveSlide(1, 'slider3')">&#10095;</button>
                 </div>
                 <div class="projects__labels">
                     <span class="projects__label">removing vinyl flooring </span>
-                    <span class="projects__label">12x24 clay tiles installment</span>
-                    <span class="projects__label">shoe molding & baseboard installation</span>
-                    <span class="projects__label">demo & sheetrock replacement</span>
-                    <span class="projects__label">wall painting </span>
+                    <span class="projects__label">12x24 clay tiles</span>
+                    <span class="projects__label">shoe molding & baseboard</span>
+                    <span class="projects__label">demo & sheetrock</span>
+                    <span class="projects__label">wall painting</span>
                     <span class="projects__label">7-day project </span>
                     <span class="projects__label">Treasure Island </span>
                     <span class="projects__label">1500 sqft</span>
                     <span class="projects__label">hurricane damage repairs </span>
+
                 </div>
             </article>
 
-            <article class="projects__item hidden">
-                <p class="projects__name">Wall with window</p>
+            <article class="projects__item hidden" id="slider4">
+                <p class="projects__name">wall with window</p>
                 <div class="projects__imgs">
-                    <img src="src/img/projects/test.png" alt="">
-                    <i class="fa-solid fa-arrow-right projects__icon-right"></i>
-                    <i class="fa-solid fa-arrow-left projects__icon-left"></i>
+                    <div class="projects__slides">
+                        <img src="src/img/projects/Wall & window1.jpg" alt="">
+                        <img src="src/img/projects/Wall & window2.jpg" alt="">
+                    </div>
+                    <button class="projects__btn projects__btn--left"
+                        onclick="moveSlide(-1, 'slider4')">&#10094;</button>
+                    <button class="projects__btn projects__btn--right"
+                        onclick="moveSlide(1, 'slider4')">&#10095;</button>
                 </div>
                 <div class="projects__labels">
                     <span class="projects__label">hurricane window leek</span>
@@ -178,45 +199,56 @@
                     <span class="projects__label">added insolation</span>
                     <span class="projects__label">recaulking exterior windows</span>
                     <span class="projects__label">drywall installment (tape, texture, and paint) </span>
-                    <span class="projects__label">baseboard installment </span>
-                    <span class="projects__label">1-day job </span>
-                    <span class="projects__label">Clearwater Beach </span>
+                    <span class="projects__label">baseboard installment</span>
+                    <span class="projects__label">1-day job</span>
                 </div>
             </article>
 
-            <article class="projects__item hidden">
-                <p class="projects__name">Corner Pantry</p>
+            <article class="projects__item hidden" id="slider5">
+                <p class="projects__name">corner pantry</p>
                 <div class="projects__imgs">
-                    <img src="src/img/projects/test.png" alt="">
-                    <i class="fa-solid fa-arrow-right projects__icon-right"></i>
-                    <i class="fa-solid fa-arrow-left projects__icon-left"></i>
+                    <div class="projects__slides">
+                        <img src="src/img/projects/corner pantry before1.jpg" alt="">
+                        <img src="src/img/projects/corner pantry after2.jpg" alt="">
+                    </div>
+                    <button class="projects__btn projects__btn--left"
+                        onclick="moveSlide(-1, 'slider5')">&#10094;</button>
+                    <button class="projects__btn projects__btn--right"
+                        onclick="moveSlide(1, 'slider5')">&#10095;</button>
                 </div>
                 <div class="projects__labels">
-                    <span class="projects__label">remove wire shelving</span>
+                    <span class="projects__label">remove wire shelving </span>
                     <span class="projects__label">patch all holes</span>
-                    <span class="projects__label">paint the closet</span>
-                    <span class="projects__label">ran two new electrical outlets </span>
-                    <span class="projects__label">wood-shelving installment </span>
+                    <span class="projects__label">paint the closet </span>
+                    <span class="projects__label">ran two new electrical outlets</span>
+                    <span class="projects__label">wood-shelving installment</span>
                     <span class="projects__label">Installing butcher block countertop</span>
                     <span class="projects__label">1-day job </span>
+
                 </div>
             </article>
 
-            <article class="projects__item hidden">
-                <p class="projects__name">kithcen <span>&</span> bathroom</p>
+            <article class="projects__item hidden" id="slider6">
+                <p class="projects__name">Kitchen <span>&</span> bathroom</p>
                 <div class="projects__imgs">
-                    <img src="src/img/projects/test.png" alt="">
-                    <i class="fa-solid fa-arrow-right projects__icon-right"></i>
-                    <i class="fa-solid fa-arrow-left projects__icon-left"></i>
+                    <div class="projects__slides">
+                        <img src="src/img/projects/Kitchen.png" alt="">
+                        <img src="src/img/projects/Bathroom.jpg" alt="">
+                    </div>
+                    <button class="projects__btn projects__btn--left"
+                        onclick="moveSlide(-1, 'slider6')">&#10094;</button>
+                    <button class="projects__btn projects__btn--right"
+                        onclick="moveSlide(1, 'slider6')">&#10095;</button>
                 </div>
                 <div class="projects__labels">
-                    <span class="projects__label">corner install bathroom </span>
+                    <span class="projects__label">corner install bathroom</span>
                     <span class="projects__label">plumbing</span>
                     <span class="projects__label">new water lines</span>
-                    <span class="projects__label">floor cutting </span>
+                    <span class="projects__label">floor cutting</span>
                     <span class="projects__label">new cabinets</span>
                     <span class="projects__label">quartz countertop</span>
                     <span class="projects__label">under-mount sink</span>
+
                 </div>
             </article>
         </div>
