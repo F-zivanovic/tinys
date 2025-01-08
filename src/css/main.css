@@ -404,7 +404,7 @@ button {
   align-items: center;
   flex-flow: nowrap;
   gap: 2rem;
-  background: linear-gradient(252.95deg, #151617 58.44%, #FF1500 138.17%, #FFFFFF 157.45%);
+  background: linear-gradient(252.95deg, #151617 58.44%, #ff1500 138.17%, #ffffff 157.45%);
   box-shadow: 0px 0px 45.3px -3px rgba(255, 255, 255, 0.09);
   padding: 70px 50px;
   border-radius: 30px;
@@ -416,7 +416,7 @@ button {
     padding: 70px 16px;
     flex-direction: column;
     align-items: stretch;
-    background: linear-gradient(320.68deg, #151617 54.97%, #FF1500 144.13%, #FFFFFF 165.69%);
+    background: linear-gradient(320.68deg, #151617 54.97%, #ff1500 144.13%, #ffffff 165.69%);
   }
 }
 .contact-form__item {
@@ -532,6 +532,7 @@ button {
   padding: 1rem;
   border-radius: 5px;
   font-size: 15px;
+  resize: none;
 }
 .contact-form__item--form .contact-form__form-box textarea::placeholder {
   text-transform: capitalize;
@@ -635,7 +636,7 @@ button {
   position: relative;
   margin-top: 70px;
   padding: 70px 0;
-  background: linear-gradient(180deg, #000000 0%, #AA0E00 661.48%);
+  background: linear-gradient(180deg, #000000 0%, #aa0e00 661.48%);
 }
 @media (max-width: 992px) {
   .footer {
@@ -677,7 +678,7 @@ button {
 }
 @media (max-width: 992px) {
   .footer__wrapper .footer__item .footer__logo-mobile {
-    display: blcok;
+    display: block;
   }
 }
 .footer__wrapper .footer__item .footer__p {
@@ -1157,7 +1158,7 @@ button {
   }
 }
 .header__imgs__item--one {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/toy-house-near-safety-construction-gear.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/home/toy-house.jpg");
   background-position: center;
 }
 @media (max-width: 1200px) {
@@ -1166,11 +1167,11 @@ button {
   }
 }
 .header__imgs__item--two {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/woman-standing-near-wooden-rack-with-brush-white-paint.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/home/woman-standing.jpg");
   background-position: center;
 }
 .header__imgs__item--three {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/technician-checking-heating-system-boiler-room.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/home/technician.jpg");
   background-position: right;
 }
 .header__text {
@@ -1251,16 +1252,18 @@ button {
   text-align: center;
   margin: 100px 0;
   position: relative;
-  padding: 0 50px;
-}
-@media (max-width: 576px) {
-  .contact {
-    margin: 150px 0 100px;
-  }
+  scroll-margin-top: -100px;
 }
 @media (max-width: 992px) {
   .contact {
     margin-bottom: 50px;
+    scroll-margin-top: -200px;
+  }
+}
+@media (max-width: 576px) {
+  .contact {
+    margin: 150px 0 100px;
+    scroll-margin-top: -300px;
   }
 }
 .contact__heading {
@@ -1282,6 +1285,7 @@ button {
 @media (max-width: 400px) {
   .contact__heading {
     width: 100%;
+    padding: 0 30px;
   }
 }
 .contact__desc {
@@ -1321,7 +1325,7 @@ button {
 .header-a {
   position: relative;
   height: 100svh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../../src/img/tiler-working-renovation-apartment.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../../src/img/about/about-main.jpg");
   background-size: cover;
   background-position: bottom;
 }
@@ -1523,7 +1527,7 @@ button {
 }
 
 .about {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../../src/img/3d-house-model-with-modern-architecture.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../../src/img/about/about-services.jpg");
   background-size: cover;
   border-radius: 15px;
   margin: 70px auto;
@@ -1698,7 +1702,7 @@ button {
   background-size: cover;
   background-position: center;
   height: 100svh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/projects/projects-main.jpg");
 }
 @media (max-width: 992px) {
   .header-p {
@@ -1975,7 +1979,7 @@ button {
   gap: 16px;
   position: relative;
   margin: 90px auto;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url("../../src/img/professional-repairman-wearing-protective-gloves.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url("../../src/img/projects/projects-vision.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -2124,13 +2128,13 @@ button {
 }
 .header-s .header__item--img {
   flex: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/plasterboard-worker-installs-plasterboard-wall-kitchen-cabinets.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/services/services-main.jpg");
   background-size: cover;
   height: 100vh;
 }
 @media (max-width: 1200px) {
   .header-s .header__item--img {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 38.75%, rgba(255, 21, 0, 0.8) 753.46%), url("../../src/img/plasterboard-worker-installs-plasterboard-wall-kitchen-cabinets.jpg");
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 38.75%, rgba(255, 21, 0, 0.8) 753.46%), url("../../src/img/services/services-main.jpg");
     background-size: cover;
     height: 100%;
   }
@@ -2312,14 +2316,18 @@ button {
   box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
 }
 
+.numbers {
+  scroll-margin-top: 100px;
+}
+
 .header-b {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/cardboard-house-with-tools-top-view.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/blog/cardboard-house.jpg");
   height: 100svh;
   background-size: cover;
 }
 @media (max-width: 768px) {
   .header-b {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 38.75%, rgba(255, 21, 0, 0.8) 753.46%), url("../../src/img/toy-house-near-safety-construction-gear.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 38.75%, rgba(255, 21, 0, 0.8) 753.46%), url("../../src/img/home/toy-house.jpg");
     background-size: cover;
     background-position: center;
   }

@@ -1,203 +1,236 @@
-@use '../abstract/index' as *;
-
-
+@use "../abstract/index" as *;
 
 // ==========================================================================
 // HEADER section
 // ==========================================================================
-.header-s{
-    height: 100svh;
-    position: relative;
-    display: flex;
+.header-s {
+  height: 100svh;
+  position: relative;
+  display: flex;
 
-    .header__item{
-        padding-left: 100px;
+  .header__item {
+    padding-left: 100px;
 
-        @include rwd(1200){ 
-            @include flex(center, center, column);
-            padding: 0 10%;
-            text-align: center;
-        }
-
-        .header__heading{
-            @extend %header-heading;
-            max-width: 650px;
-
-            @include rwd(992){
-                font-size: 32px;
-                max-width: 370px;
-            }
-
-            @include rwd(450){
-                font-size: 28px;
-                max-width: 100%;
-            }
-        }
-
-        .header__p{
-            @extend %header-paragraph;
-            max-width: 600px;
-
-            @include rwd(992){
-                font-size: 16px;
-                max-width: 350px;
-            }
-        }
-
-        .header__btns{
-            display: flex;
-            gap: 1rem;
-
-            @include rwd(992){
-                flex-direction: column;
-                gap: 2rem;
-            }
-        }
+    @include rwd(1200) {
+      @include flex(center, center, column);
+      padding: 0 10%;
+      text-align: center;
     }
 
-    .header__item--bg{
-        @include flex(center, stretch, column);
-        @include rwd(1200){ display: none; }
-        flex: 1.3;
-        background: linear-gradient(270deg, rgba(0, 0, 0, 0.7) 58.49%, rgba(255, 21, 0, 0.7) 194.03%);
+    .header__heading {
+      @extend %header-heading;
+      max-width: 650px;
+
+      @include rwd(992) {
+        font-size: 32px;
+        max-width: 370px;
+      }
+
+      @include rwd(450) {
+        font-size: 28px;
+        max-width: 100%;
+      }
     }
 
-    .header__item--img{
-        flex: 1;
-        background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../../src/img/plasterboard-worker-installs-plasterboard-wall-kitchen-cabinets.jpg');
-        background-size: cover;
-        height: 100vh;
+    .header__p {
+      @extend %header-paragraph;
+      max-width: 600px;
 
-        @include rwd(1200){
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 38.75%, rgba(255, 21, 0, 0.8) 753.46%),
-            url('../../src/img/plasterboard-worker-installs-plasterboard-wall-kitchen-cabinets.jpg');
-            background-size: cover;
-            height: 100%;
-        }
-
-        & *{
-            @include rwd(1200){ display: block;}
-            display: none;
-        }
+      @include rwd(992) {
+        font-size: 16px;
+        max-width: 350px;
+      }
     }
+
+    .header__btns {
+      display: flex;
+      gap: 1rem;
+
+      @include rwd(992) {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+  }
+
+  .header__item--bg {
+    @include flex(center, stretch, column);
+    @include rwd(1200) {
+      display: none;
+    }
+    flex: 1.3;
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0.7) 58.49%,
+      rgba(255, 21, 0, 0.7) 194.03%
+    );
+  }
+
+  .header__item--img {
+    flex: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/services/services-main.jpg");
+    background-size: cover;
+    height: 100vh;
+
+    @include rwd(1200) {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.8) 38.75%,
+          rgba(255, 21, 0, 0.8) 753.46%
+        ),
+        url("../../src/img/services/services-main.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+
+    & * {
+      @include rwd(1200) {
+        display: block;
+      }
+      display: none;
+    }
+  }
 }
-
-
-
 
 // ==========================================================================
 // SERVICES section
 // ==========================================================================
-.services{
-    @include rwd(768){ width: 90%; }
-    width: 70%;
-    margin: auto;
- 
-    &__header{
-        @include section-header(center, uppercase, 576px, 32px);
-        @include rwd(1200){display: block;}
-        display: none;
-        
-        &-p{
-            font-weight: 300;
-            max-width: 300px;
-            margin: 2rem auto;
-        }
+.services {
+  @include rwd(768) {
+    width: 90%;
+  }
+  width: 70%;
+  margin: auto;
 
-        &-tel{
-            @include text(16px, 300, $primary-color, capitalize);
-        }  
+  &__header {
+    @include section-header(center, uppercase, 576px, 32px);
+    @include rwd(1200) {
+      display: block;
+    }
+    display: none;
+
+    &-p {
+      font-weight: 300;
+      max-width: 300px;
+      margin: 2rem auto;
     }
 
-    &__wrapper{ 
-        @include flex(flex-start, stretch, wrap);
-        margin-top: 48px;
-
-        .services__item{
-            flex-basis:33%;
-            padding: 32px;
-    
-            @include rwd(1200){flex-basis: 50%;}
-
-            @include rwd(576){
-                padding: 32px 16px;
-            }
-    
-            &:nth-child(1){
-                @include rwd(1200){ display: none; }
-            }
-    
-            &:nth-child(2){
-                @include rwd(1200){ order: -1; }
-            }
-    
-            &:nth-child(3){
-                @include rwd(1200){ order: 0; }
-            }
-    
-            &:nth-child(4){
-                @include rwd(1200){ order: 2; }
-            }
-    
-            &:nth-child(5){
-                @include rwd(1200){ order: 1; }
-            }
-    
-            &:nth-child(6){
-                @include rwd(1200){ order: 3; }
-            }
-    
-            .services__heading{
-                @include text(45px, 600, $white-color, uppercase);
-                margin-bottom: 60px;
-            }
-    
-            .services__text{
-                @include text(15px, 300, $white-color);
-                margin-bottom: 1rem;
-                max-width: 350px;
-            }
-    
-            .services__tel{
-                @include text(16px, 300, $primary-color, capitalize);
-            }
-    
-            .services__img{
-                @include flex(center, center);
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                line-height: 60px;
-                text-align: center;
-                box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
-                background: rgba(39, 39, 39, 1);
-            }
-
-            svg{ fill: $primary-color; }
-    
-            .services__name{
-                @include text(24px, 500, $white-color);
-                margin: 100px 0 40px;
-
-                @include rwd(1200){
-                    font-size: 14px;
-                    margin: 32px 0 16px;
-                }
-            }
-    
-            .services__desc{
-                @include text(14px, 300,  rgba(220, 220, 220, 1));
-                @include rwd(1200){ font-size: 12px; }
-            }
-        }
-    
-        .services__item--bg{
-            background-color: rgba(39, 39, 39, 1);
-    
-            .services__img{
-                box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
-            }
-        }
+    &-tel {
+      @include text(16px, 300, $primary-color, capitalize);
     }
+  }
+
+  &__wrapper {
+    @include flex(flex-start, stretch, wrap);
+    margin-top: 48px;
+
+    .services__item {
+      flex-basis: 33%;
+      padding: 32px;
+
+      @include rwd(1200) {
+        flex-basis: 50%;
+      }
+
+      @include rwd(576) {
+        padding: 32px 16px;
+      }
+
+      &:nth-child(1) {
+        @include rwd(1200) {
+          display: none;
+        }
+      }
+
+      &:nth-child(2) {
+        @include rwd(1200) {
+          order: -1;
+        }
+      }
+
+      &:nth-child(3) {
+        @include rwd(1200) {
+          order: 0;
+        }
+      }
+
+      &:nth-child(4) {
+        @include rwd(1200) {
+          order: 2;
+        }
+      }
+
+      &:nth-child(5) {
+        @include rwd(1200) {
+          order: 1;
+        }
+      }
+
+      &:nth-child(6) {
+        @include rwd(1200) {
+          order: 3;
+        }
+      }
+
+      .services__heading {
+        @include text(45px, 600, $white-color, uppercase);
+        margin-bottom: 60px;
+      }
+
+      .services__text {
+        @include text(15px, 300, $white-color);
+        margin-bottom: 1rem;
+        max-width: 350px;
+      }
+
+      .services__tel {
+        @include text(16px, 300, $primary-color, capitalize);
+      }
+
+      .services__img {
+        @include flex(center, center);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        line-height: 60px;
+        text-align: center;
+        box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
+        background: rgba(39, 39, 39, 1);
+      }
+
+      svg {
+        fill: $primary-color;
+      }
+
+      .services__name {
+        @include text(24px, 500, $white-color);
+        margin: 100px 0 40px;
+
+        @include rwd(1200) {
+          font-size: 14px;
+          margin: 32px 0 16px;
+        }
+      }
+
+      .services__desc {
+        @include text(14px, 300, rgba(220, 220, 220, 1));
+        @include rwd(1200) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .services__item--bg {
+      background-color: rgba(39, 39, 39, 1);
+
+      .services__img {
+        box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
+
+.numbers {
+  scroll-margin-top: 100px;
 }

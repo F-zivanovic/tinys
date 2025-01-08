@@ -1,265 +1,303 @@
-@use '../abstract/index' as *;
-
-
+@use "../abstract/index" as *;
 
 // ==========================================================================
 // HEADER section
 // ==========================================================================
-.header-p{
-    clip-path: polygon(0 1%, 100% 0%, 100% 75%, 0 100%);
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    height: 100svh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('../../src/img/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge.jpg');
+.header-p {
+  clip-path: polygon(0 1%, 100% 0%, 100% 75%, 0 100%);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../src/img/projects/projects-main.jpg");
 
-    @include rwd(992){ clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%); }
+  @include rwd(992) {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
 
-    .header__wrapper{
-        @include flex(center, flex-start, column);
-        height: 100%;
+  .header__wrapper {
+    @include flex(center, flex-start, column);
+    height: 100%;
 
-        @include rwd(992){
-            align-items: center;
-            text-align: center;
-        }
-    
-        .header__heading{
-            @extend %header-heading;
-            @include rwd(768){ font-size: 37px; }
-            @include rwd(450){ font-size: 30px; }
-        }
-
-        .header__p{
-            @extend %header-paragraph;
-            @include rwd(1200){ width: 350px; }
-            @include rwd(400){ width: 100%; }
-            max-width: 650px;
-        }
+    @include rwd(992) {
+      align-items: center;
+      text-align: center;
     }
 
-    .header__triangle-one{
-        @include positioning(absolute, auto, auto, 0, -220px, 500px, 380px);
-        clip-path: polygon(49% 0, 0% 100%, 100% 100%);
-        background: rgba(255, 255, 255, 0.16);
-        z-index: -1;
-
-        @include rwd(992){ display: none; }
+    .header__heading {
+      @extend %header-heading;
+      @include rwd(768) {
+        font-size: 37px;
+      }
+      @include rwd(450) {
+        font-size: 30px;
+      }
     }
 
-    .header__triangle-two{
-        @include positioning(absolute, auto, auto, 0, 100px, 500px, 600px);
-        clip-path: polygon(49% 0, 0% 100%, 100% 100%);
-        background: rgba(0, 0, 0, 0.16);
-        z-index: -1;
-
-        @include rwd(992){ display: none; }
-
+    .header__p {
+      @extend %header-paragraph;
+      @include rwd(1200) {
+        width: 350px;
+      }
+      @include rwd(400) {
+        width: 100%;
+      }
+      max-width: 650px;
     }
+  }
 
-    .header__triangle-three{
-        @include positioning(absolute, auto, auto, 0, 300px, 550px, 450px);
-        clip-path: polygon(74% 3%, 0% 100%, 100% 100%);
-        background: rgba(255, 21, 0, 0.16);
-        z-index: -1;
+  .header__triangle-one {
+    @include positioning(absolute, auto, auto, 0, -220px, 500px, 380px);
+    clip-path: polygon(49% 0, 0% 100%, 100% 100%);
+    background: rgba(255, 255, 255, 0.16);
+    z-index: -1;
 
-        @include rwd(992){ display: none; }
-
+    @include rwd(992) {
+      display: none;
     }
+  }
+
+  .header__triangle-two {
+    @include positioning(absolute, auto, auto, 0, 100px, 500px, 600px);
+    clip-path: polygon(49% 0, 0% 100%, 100% 100%);
+    background: rgba(0, 0, 0, 0.16);
+    z-index: -1;
+
+    @include rwd(992) {
+      display: none;
+    }
+  }
+
+  .header__triangle-three {
+    @include positioning(absolute, auto, auto, 0, 300px, 550px, 450px);
+    clip-path: polygon(74% 3%, 0% 100%, 100% 100%);
+    background: rgba(255, 21, 0, 0.16);
+    z-index: -1;
+
+    @include rwd(992) {
+      display: none;
+    }
+  }
 }
-
-
-
-
 
 // ==========================================================================
 // PROJECTS section
 // ==========================================================================
-.projects{
-    @include rwd(576){ scroll-margin-top: 80px;}
-    position: relative;
-    scroll-margin-top: 100px;
+.projects {
+  @include rwd(576) {
+    scroll-margin-top: 80px;
+  }
+  position: relative;
+  scroll-margin-top: 100px;
 
-    &__header{
-        @include rwd(992){text-align: center;}
-        text-align: right;
+  &__header {
+    @include rwd(992) {
+      text-align: center;
+    }
+    text-align: right;
 
-        .projects__heading{
-            font-weight: 600;
-            font-size: 42px;
-            margin-bottom: 20px;
+    .projects__heading {
+      font-weight: 600;
+      font-size: 42px;
+      margin-bottom: 20px;
 
-            @include rwd(992){
-                font-size: 32px;
-                max-width: 250px;
-                margin:0 auto 20px;
-            }
+      @include rwd(992) {
+        font-size: 32px;
+        max-width: 250px;
+        margin: 0 auto 20px;
+      }
+    }
+
+    .projects__p {
+      font-weight: 300;
+      max-width: 870px;
+      margin-left: auto;
+
+      @include rwd(992) {
+        margin: auto;
+        width: 280px;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include flex(space-between, stretch, wrap);
+    @include rwd(1200) {
+      row-gap: 70px;
+    }
+    row-gap: 150px;
+    margin-top: 50px;
+
+    .projects__item {
+      @include rwd(1200) {
+        flex-basis: 45%;
+      }
+      @include rwd(768) {
+        flex-basis: 100%;
+      }
+      flex-basis: 30%;
+
+      &.hidden {
+        @include rwd(768) {
+          display: none;
+        }
+      }
+
+      .projects__name {
+        @include text(24px, 500, $white-color, uppercase);
+        @include rwd(768) {
+          text-align: center;
+        }
+        margin-bottom: 20px;
+
+        span {
+          color: $primary-color;
+        }
+      }
+
+      .projects__imgs {
+        position: relative;
+        overflow: hidden;
+
+        .projects__slides {
+          transition: 0.4s linear;
+          display: flex;
+
+          img {
+            width: 100%;
+            flex-shrink: 0;
+          }
         }
 
-        .projects__p{
-            font-weight: 300;
-            max-width:870px;
-            margin-left: auto;
+        .projects__btn {
+          @include positioning(absolute, 50%, auto, auto, auto);
+          // transform: translateY(calc(-50% + 30px));
+          border-radius: 50%;
+          line-height: 30px;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          border: 2px solid $white-color;
+          cursor: pointer;
+          transition: 0.4s linear;
+          font-size: 13px;
 
-            @include rwd(992){
-               margin: auto;
-               width: 280px;
-            }
+          &:hover {
+            color: $primary-color;
+            border-color: $primary-color;
+          }
+
+          &--right {
+            right: 10px;
+          }
+
+          &--left {
+            left: 10px;
+          }
         }
-    }
+      }
 
-    &__wrapper{
-        @include flex(space-between, stretch, wrap);
-        @include rwd(1200){ row-gap: 70px; }
-        row-gap: 150px;
-        margin-top: 50px;
-
-        .projects__item{
-            @include rwd(1200){ flex-basis: 45%; }
-            @include rwd(768){ flex-basis: 100%; }
-            flex-basis: 30%;
-
-            &.hidden{
-                @include rwd(768){ display: none; }
-            }
-
-            .projects__name{
-                @include text(24px, 500, $white-color, uppercase);
-                @include rwd(768){ text-align: center; }
-                margin-bottom: 20px;
-
-                span{color: $primary-color};
-            }
-
-            .projects__imgs{
-                position: relative;
-                overflow: hidden;
-
-                .projects__slides{
-                    transition: 0.4s linear;
-                    display: flex;
-    
-                    img{
-                        width: 100%;
-                        flex-shrink: 0;
-                    }
-                }
-
-                .projects__btn{
-                        @include positioning(absolute, 50%, auto, auto, auto);
-                        // transform: translateY(calc(-50% + 30px));
-                        border-radius: 50%;
-                        line-height: 30px;
-                        width: 30px;
-                        height: 30px;
-                        text-align: center;
-                        border: 2px solid $white-color;
-                        cursor: pointer;
-                        transition: 0.4s linear;
-                        font-size: 13px;
-    
-                        &:hover{
-                            color: $primary-color;
-                            border-color: $primary-color;
-                        }
-    
-                    &--right{ right: 10px; }
-    
-                    &--left{ left: 10px; }
-                }
-            }
-
-            .projects__labels{
-                @include flex(center, stretch, wrap, 9px);
-                @include rwd(1200){ justify-content: center; }
-                margin-top: 20px;
-
-                .projects__label{
-                    text-transform: capitalize;
-                    font-size: 13px;
-                    border-radius: 50px;
-                    padding: 10px 16px;
-                    border: 0.8px solid rgba(255, 255, 255, 0.3)
-                }
-            }
+      .projects__labels {
+        @include flex(center, stretch, wrap, 9px);
+        @include rwd(1200) {
+          justify-content: center;
         }
-    }
+        margin-top: 20px;
 
-    &__btns{
-        @include rwd(768){ display: block; }
-        margin:30px auto 0;
-        display: none;
+        .projects__label {
+          text-transform: capitalize;
+          font-size: 13px;
+          border-radius: 50px;
+          padding: 10px 16px;
+          border: 0.8px solid rgba(255, 255, 255, 0.3);
+        }
+      }
     }
+  }
 
-    &__color{
-        @include positioning(absolute, 45%, 0, auto, auto, 200px);
-        @include rwd(1200){ display: none; }
+  &__btns {
+    @include rwd(768) {
+      display: block;
     }
+    margin: 30px auto 0;
+    display: none;
+  }
+
+  &__color {
+    @include positioning(absolute, 45%, 0, auto, auto, 200px);
+    @include rwd(1200) {
+      display: none;
+    }
+  }
 }
-
-
-
-
-
-
 
 // ==========================================================================
 // VISION section
 // ==========================================================================
-.vision{
-    @include flex(center, center, column, 16px);
-    @include rwd(1200){ margin: 70px auto; }
-    position: relative;
-    margin: 90px auto;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
-     url('../../src/img/professional-repairman-wearing-protective-gloves.jpg');
-     background-size: cover;
-     background-position: center;
-     border-radius: 20px;
-     text-align: center;
-     padding: 100px 0;
+.vision {
+  @include flex(center, center, column, 16px);
+  @include rwd(1200) {
+    margin: 70px auto;
+  }
+  position: relative;
+  margin: 90px auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
+    url("../../src/img/projects/projects-vision.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  text-align: center;
+  padding: 100px 0;
 
+  &__heading {
+    font-weight: 600;
+    font-size: 36px;
 
-     &__heading{
-        font-weight: 600;
-        font-size: 36px;
-        
-        span{color: $primary-color;}
+    span {
+      color: $primary-color;
+    }
 
-        @include rwd(992){
-            font-size: 26px;
-            width: 280px;
-        }
-     }
+    @include rwd(992) {
+      font-size: 26px;
+      width: 280px;
+    }
+  }
 
-     &__p{
-        font-weight: 300;
+  &__p {
+    font-weight: 300;
 
-        @include rwd(992){ width: 350px; }
+    @include rwd(992) {
+      width: 350px;
+    }
 
-        @include rwd(576){
-            font-size: 14px;
-            max-width: 100%;
-        }
-     }
+    @include rwd(576) {
+      font-size: 14px;
+      max-width: 100%;
+    }
+  }
 
-     &__img{
-        @include rwd(992){ width: 200px; }
-        opacity: 0.2;
-        width: 390px;
-        margin: 20px 0;
-     }
+  &__img {
+    @include rwd(992) {
+      width: 200px;
+    }
+    opacity: 0.2;
+    width: 390px;
+    margin: 20px 0;
+  }
 
-     &__brush{
-        @include positioning(absolute, auto, auto, -340px, -170px, 300px);
-        @include rwd(1200) {display: none; }
-        opacity: 0.2;
-     }
+  &__brush {
+    @include positioning(absolute, auto, auto, -340px, -170px, 300px);
+    @include rwd(1200) {
+      display: none;
+    }
+    opacity: 0.2;
+  }
 }
 
-
-.projects__icon{
-    @include positioning(absolute, 80%, 0, auto, atuo, 120px);
-    @include rwd(1200){ display: none; }
+.projects__icon {
+  @include positioning(absolute, 80%, 0, auto, atuo, 120px);
+  @include rwd(1200) {
+    display: none;
+  }
 }
