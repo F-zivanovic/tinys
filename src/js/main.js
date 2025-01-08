@@ -153,6 +153,21 @@ function moveSlide(step, sliderId) {
 
 
 
+// Load more projects - Projects section
+let loadMoreBtn = document.querySelector('[data-item="projects-btn"]');
+
+loadMoreBtn.addEventListener('click', ()=>{
+    let projects = document.querySelectorAll('.projects__item');
+    projects.forEach(project => project.classList.remove('hidden'));
 
 
+    window.addEventListener('resize', ()=>{
+        if(window.innerWidth > 768){
+            for (let i = 3; i < projects.length; i++) {
+                projects[i].classList.add('hidden');      
+            }
+        }
+    });
+
+}); 
 

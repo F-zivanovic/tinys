@@ -148,7 +148,7 @@
 
                 .projects__btn{
                         @include positioning(absolute, 50%, auto, auto, auto);
-                        transform: translateY(calc(-50% - 30px));
+                        // transform: translateY(calc(-50% + 30px));
                         border-radius: 50%;
                         line-height: 30px;
                         width: 30px;
@@ -186,9 +186,10 @@
         }
     }
 
-    &__btn{
+    &__btns{
+        @include rwd(768){ display: block; }
         margin:30px auto 0;
-        display: block;
+        display: none;
     }
 
     &__color{

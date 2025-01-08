@@ -1903,7 +1903,6 @@ button {
   width: auto;
   height: auto;
   transform: translateY(-50%);
-  transform: translateY(calc(-50% - 30px));
   border-radius: 50%;
   line-height: 30px;
   width: 30px;
@@ -1944,9 +1943,14 @@ button {
   padding: 10px 16px;
   border: 0.8px solid rgba(255, 255, 255, 0.3);
 }
-.projects__btn {
+.projects__btns {
   margin: 30px auto 0;
-  display: block;
+  display: none;
+}
+@media (max-width: 768px) {
+  .projects__btns {
+    display: block;
+  }
 }
 .projects__color {
   position: absolute;
