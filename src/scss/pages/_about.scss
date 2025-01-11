@@ -220,6 +220,11 @@
       flex-basis: 30%;
       text-align: center;
 
+      svg {
+        height: 35px;
+        width: 35px;
+      }
+
       .about__name {
         @include text(16px, 700, $white-color, uppercase, center);
         margin: 16px 0;

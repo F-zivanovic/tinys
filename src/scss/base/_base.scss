@@ -1,42 +1,51 @@
-@use '../abstract/index' as *;
+@use "../abstract/index" as *;
 
 *,
 *::after,
-*::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    list-style-type: none;
-    text-decoration: none;
-    border: none;
-    outline: none;
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 
-body{
-    @include rwd(576){ font-size: 85%; }
-    font-size: 100%;
-    overflow-x: hidden;
-    line-height: 1.4;
-    color: $white-color;
-    background-color: $secondary-color;
-    font-family: $font-family;
+body {
+  @include rwd(576) {
+    font-size: 85%;
+  }
+  font-size: 100%;
+  overflow-x: hidden;
+  line-height: 1.4;
+  color: $white-color;
+  background-color: $secondary-color;
+  font-family: $font-family;
 }
 
-a{
-    transition: 0.4s linear;
-    color: $white-color;
+a {
+  transition: 0.4s linear;
+  color: $white-color;
 
-    &:hover{color: $primary-color;}
+  &:hover {
+    color: $primary-color;
+  }
 }
 
-img{
-    max-width: 100%;
-    object-fit: cover;
-    vertical-align: middle;
+ul {
+  list-style-type: none;
 }
 
-section{
-    @include rwd(576){ padding: 70px 0; }
-    padding: 90px 0;
+img {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+section {
+  @include rwd(576) {
+    padding: 70px 0;
+  }
+  padding: 90px 0;
 }
