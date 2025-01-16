@@ -1,23 +1,23 @@
-@use '../abstract/index' as *;
+@use "../abstract/index" as *;
 
+.arrow__up {
+  @include positioning(fixed, auto, 20px, 20px, auto, 45px, 45px);
+  line-height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: $primary-color;
+  color: $white-color;
+  border: 2px solid $primary-color;
+  transform: translateX(200px);
+  transition: 0.4s linear;
+  cursor: pointer;
 
+  &:hover {
+    background: transparent;
+    color: $primary-color;
+  }
 
-.arrow__up{
-    @include positioning(fixed, auto, 20px, 20px, auto);
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: $primary-color;
-    color: $white-color;
-    border: 2px solid $primary-color;
-    transform: translateX(200px);
-
-    &:hover{
-        background: transparent;
-        color: $primary-color;
-    }
-
-    &.active{ transform: translateX(0); }
+  &.active {
+    transform: translateX(0);
+  }
 }

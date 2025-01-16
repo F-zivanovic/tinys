@@ -1,7 +1,7 @@
 // Open/close mobile menu
-let hamburgerIcon = document.querySelector('[data-key="hamburger"]');
-let mobileMenu = document.querySelector('[data-key="mobile-menu"]');
-let closeMobileMenu = document.querySelector('[data-key="close"]');
+let hamburgerIcon = document.getElementById("hamburger");
+let mobileMenu = document.getElementById("mobile-menu");
+let closeMobileMenu = document.getElementById("close");
 
 hamburgerIcon.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
@@ -29,7 +29,7 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// Arrow up icons
+// Arrow up icon
 const arrowUp = document.querySelector(".arrow__up");
 
 document.addEventListener("scroll", () => {
@@ -107,6 +107,15 @@ try {
   console.log(e);
 }
 
+// Dynamic date
+getYear();
+
+function getYear() {
+  let copy = document.getElementById("year");
+  let date = new Date();
+  copy.innerHTML = date.getFullYear();
+}
+
 // Slider on projects page
 let slideIndices = {
   slider1: 0,
@@ -133,26 +142,17 @@ function moveSlide(step, sliderId) {
 }
 
 // Load more projects - Projects section
-// let loadMoreBtn = document.querySelector('[data-item="projects-btn"]');
+let loadMoreBtn = document.getElementById("projects-btn");
 
-// loadMoreBtn.addEventListener("click", () => {
-//   let projects = document.querySelectorAll(".projects__item");
-//   projects.forEach((project) => project.classList.remove("hidden"));
+loadMoreBtn.addEventListener("click", () => {
+  let projects = document.querySelectorAll('[data-item="projects-item"]');
+  projects.forEach((project) => project.classList.remove("hidden"));
 
-//   window.addEventListener("resize", () => {
-//     if (window.innerWidth > 768) {
-//       for (let i = 3; i < projects.length; i++) {
-//         projects[i].classList.add("hidden");
-//       }
-//     }
-//   });
-// });
-
-// Dynamic date
-getYear();
-
-function getYear() {
-  let copy = document.getElementById("year");
-  let date = new Date();
-  copy.innerHTML = date.getFullYear();
-}
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      for (let i = 3; i < projects.length; i++) {
+        projects[i].classList.add("hidden");
+      }
+    }
+  });
+});

@@ -17,37 +17,37 @@
     background-position: center;
   }
 
-  .header__wrapper {
+  &__wrapper {
     @include flex(center, center, column);
     height: 100vh;
+  }
 
-    .header__heading {
-      @extend %header-heading;
-      width: 700px;
-      text-align: center;
+  &__heading {
+    @extend %header-heading;
+    width: 700px;
+    text-align: center;
 
-      @include rwd(768) {
-        font-size: 28px;
-        width: 100%;
-      }
-
-      @include rwd(576) {
-        font-size: 25px;
-      }
+    @include rwd(768) {
+      font-size: 28px;
+      width: 100%;
     }
 
-    .header__p {
-      @extend %header-paragraph;
-      text-align: center;
+    @include rwd(576) {
+      font-size: 25px;
+    }
+  }
 
-      @include rwd(768) {
-        width: 300px;
-      }
+  &__p {
+    @extend %header-paragraph;
+    text-align: center;
 
-      @include rwd(350) {
-        font-size: 14px;
-        width: 260px;
-      }
+    @include rwd(768) {
+      width: 300px;
+    }
+
+    @include rwd(350) {
+      font-size: 14px;
+      width: 260px;
     }
   }
 }

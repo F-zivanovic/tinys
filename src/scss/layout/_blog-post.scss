@@ -3,13 +3,12 @@
 .header-bp {
   height: 70vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../../src/img/fallen-tree-from-hurricane-storm-caused-roof-damage-house-concept-storm-damage-fallen-tree-home-repair-insurance-claim-weather-emergency.jpg");
+    url("../../src/img/blog/blog-posts/la-fire.webp");
   background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
 
-  .header__heading {
+  &__heading {
     text-transform: uppercase;
     font-size: clamp(30px, 5vw, 55px);
     margin: 0 10%;

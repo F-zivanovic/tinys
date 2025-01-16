@@ -10,7 +10,7 @@
 
     <!-- TODO: meta -->
 
-    <!-- font awesome -->
+    <!-- Font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -19,7 +19,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- google fonts -->
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
 
-    <!-- custom css -->
+    <!-- Custom css -->
     <link rel="stylesheet" href="src/css/main.css" />
   </head>
 
@@ -37,12 +37,12 @@
       <a href="index.html" class="nav__logo">
         <img
           src="src/img/logos/desktop-logo.png"
-          alt="tinys remodeling logo"
+          alt="tinys remodeling logo for desktop"
           class="nav__logo-desktop"
         />
         <img
           src="src/img/logos/mogile-logo.png"
-          alt="tinys remodeling logo"
+          alt="tinys remodeling logo for mobile"
           class="nav__logo-mobile"
         />
       </a>
@@ -52,7 +52,7 @@
           <a href="projects.html" class="nav__link">projects</a>
         </li>
         <li class="nav__list__item">
-          <a href="services.html" class="nav__link">services</a>
+          <a href="services.html" class="nav__link active">services</a>
         </li>
         <li class="nav__list__item">
           <a href="about.html" class="nav__link">about</a>
@@ -69,7 +69,7 @@
         </li>
       </ul>
 
-      <div class="nav__hamburger" data-key="hamburger">
+      <div class="nav__hamburger" id="hamburger">
         <div class="hamburger__line"></div>
         <div class="hamburger__line hamburger__line--mid"></div>
         <div class="hamburger__line"></div>
@@ -79,25 +79,25 @@
 
     <!-- Header section starts -->
     <header class="header-s">
-      <article class="header__item header__item--bg">
-        <h1 class="header__heading">You have an issue, we have a solution</h1>
-        <p class="header__p">
+      <article class="header-s__item header-s__item--bg">
+        <h1 class="header-s__heading">You have an issue, we have a solution</h1>
+        <p class="header-s__p">
           From repairs to renovations, we handle it all. Quality craftsmanship
           and exceptional service bring your vision to life.
         </p>
-        <div class="header__btns">
+        <div class="header-s__btns">
           <a href="projects.html" class="btn btn-primary">projects</a>
           <a href="contact.html" class="btn btn-outline">contact</a>
         </div>
       </article>
 
-      <article class="header__item header__item--img">
-        <h1 class="header__heading">You have an issue, we have a solution</h1>
-        <p class="header__p">
+      <article class="header-s__item header-s__item--img">
+        <h1 class="header-s__heading">You have an issue, we have a solution</h1>
+        <p class="header-s__p">
           From repairs to renovations, we handle it all. Quality craftsmanship
           and exceptional service bring your vision to life.
         </p>
-        <div class="header__btns">
+        <div class="header-s__btns">
           <a href="projects.html" class="btn btn-primary">our projects</a>
           <a href="contact.html" class="btn btn-outline">contact</a>
         </div>
@@ -108,7 +108,11 @@
     <!-- Header section ends -->
 
     <!-- Numbers section starts -->
-    <section class="numbers container" id="numbers">
+    <section
+      class="numbers container"
+      id="numbers"
+      style="scroll-margin-top: 100px"
+    >
       <article class="numbers__item">
         <p class="numbers__number" data-target="250" data-key="number">0+</p>
         <p class="numbers__name">projects done</p>
@@ -133,7 +137,7 @@
 
     <!-- Services section starts -->
     <section class="services">
-      <!-- Header -->
+      <!-- Header part -->
       <div class="services__header section-header">
         <div class="section-subtitle">services</div>
         <p class="services__header-p">
@@ -322,9 +326,7 @@
       <!-- Header part -->
       <div class="section-header">
         <h2 class="section-title">our projects</h2>
-        <p class="section-subtitle" style="text-transform: capitalize">
-          innovative solutions, real results
-        </p>
+        <p class="section-subtitle">innovative solutions, real results</p>
         <p class="projects__desc">
           Explore our diverse portfolio of projects that showcase our commitment
           to excellence, sustainability, and creativity. From concept to
@@ -333,63 +335,88 @@
         </p>
       </div>
 
-      <!-- Main oart -->
-      <div class="projects__wrapper">
-        <a href="projects.html" class="projects__item active">
-          <img src="src/img/projects/stairs2.jpg" alt="" />
-          <div class="projects__overlay">
-            <h3 class="projects__name">stairs project</h3>
-            <p class="projects__category">orlando</p>
+      <!-- Main part -->
+      <div class="projects-s__wrapper">
+        <a href="projects.html" class="projects-s__item active">
+          <img src="src/img/projects/stairs2.jpg" alt="image of stairs" />
+          <div class="projects-s__overlay">
+            <h3 class="projects-s__name">stairs project</h3>
+            <p class="projects-s__location">orlando</p>
           </div>
         </a>
 
-        <a href="projects.html" class="projects__item projects__item--hidden">
-          <img src="src/img/projects/Wood Floor After2.jpg" alt="" />
-          <div class="projects__overlay">
-            <h3 class="projects__name">wood floor project</h3>
-            <p class="projects__category">orlando</p>
+        <a
+          href="projects.html"
+          class="projects-s__item projects-s__item--hidden"
+        >
+          <img
+            src="src/img/projects/Wood Floor After2.jpg"
+            alt="image of wood floor"
+          />
+          <div class="projects-s__overlay">
+            <h3 class="projects-s__name">wood floor project</h3>
+            <p class="projects-s__location">orlando</p>
           </div>
         </a>
 
-        <a href="projects.html" class="projects__item projects__item--hidden">
-          <img src="src/img/projects/Floor & Walls After2.jpg" alt="" />
-          <div class="projects__overlay">
-            <h3 class="projects__name">floor & walls project</h3>
-            <p class="projects__category">treasure island</p>
+        <a
+          href="projects.html"
+          class="projects-s__item projects-s__item--hidden"
+        >
+          <img
+            src="src/img/projects/Floor & Walls After2.jpg"
+            alt="image of floor and walls"
+          />
+          <div class="projects-s__overlay">
+            <h3 class="projects-s__name">floor & walls project</h3>
+            <p class="projects-s__location">treasure island</p>
           </div>
         </a>
 
-        <a href="projects.html" class="projects__item projects__item--hidden">
-          <img src="src/img/projects/wal-window1.jpg" alt="" />
-          <div class="projects__overlay">
-            <h3 class="projects__name">wall & window project</h3>
-            <p class="projects__category">Clearwater Beach</p>
+        <a
+          href="projects.html"
+          class="projects-s__item projects-s__item--hidden"
+        >
+          <img
+            src="src/img/projects/wal-window2.jpg"
+            alt="image of wall window"
+          />
+          <div class="projects-s__overlay">
+            <h3 class="projects-s__name">wall with window project</h3>
+            <p class="projects-s__location">Clearwater Beach</p>
           </div>
         </a>
 
-        <a href="projects.html" class="projects__item">
-          <img src="src/img/projects/corner pantry after2.jpg" alt="" />
-          <div class="projects__overlay">
-            <h3 class="projects__name">corner pantry project</h3>
-            <p class="projects__category">orlando</p>
+        <a href="projects.html" class="projects-s__item">
+          <img
+            src="src/img/projects/corner pantry after2.jpg"
+            alt="image of corner pantry"
+          />
+          <div class="projects-s__overlay">
+            <h3 class="projects-s__name">corner pantry project</h3>
+            <p class="projects-s__location">orlando</p>
           </div>
         </a>
 
-        <a href="projects.html" class="projects__item">
-          <img src="src/img/projects/Kitchen.png" alt="" />
-          <div class="projects__overlay">
-            <h3 class="projects__name">kitchen & bathroom project</h3>
-            <p class="projects__category">modern design</p>
+        <a href="projects.html" class="projects-s__item">
+          <img src="src/img/projects/Kitchen.png" alt="image of kitchen" />
+          <div class="projects-s__overlay">
+            <h3 class="projects-s__name">kitchen & bathroom project</h3>
+            <p class="projects-s__location">orlando</p>
           </div>
         </a>
       </div>
 
-      <div class="projects__cta">
+      <div class="projects-s__btn">
         <a href="projects.html" class="btn btn-primary">see more</a>
       </div>
 
-      <img src="src/img/icons/hammer.png" class="projects__hammer" alt="" />
-      <img src="src/img/icons/drill.png" class="projects__drill" alt="" />
+      <img
+        src="src/img/icons/hammer.png"
+        class="projects-s__hammer"
+        alt="image of hammer"
+        aria-hidden="true"
+      />
     </section>
     <!-- Projects section ends -->
 
@@ -446,7 +473,7 @@
     <!-- Contact Form section ends -->
 
     <!-- FAQ section starts -->
-    <section class="faq container" data-key="faq">
+    <section class="faq container">
       <h3 class="faq__heading">Maybe you can find your answer here</h3>
 
       <div class="faq__wrapper">
@@ -547,11 +574,11 @@
         <article class="blog-posts__item">
           <div class="blog-posts__img">
             <img
-              src="src/img/fallen-tree-from-hurricane-storm-caused-roof-damage-house-concept-storm-damage-fallen-tree-home-repair-insurance-claim-weather-emergency.jpg"
-              alt=""
+              src="src/img/blog/blog-posts/la-fire.webp"
+              alt="the plane extinguishes the fire in los angeles"
             />
           </div>
-          <div class="blog-posts__body">
+          <div>
             <h4 class="blog-posts__heading">
               Fires in Los Angeles Are Coming to an End: Let Us Help Restore
               Your Home
@@ -583,12 +610,12 @@
           <a href="index.html" class="footer__logo">
             <img
               src="src/img/logos/desktop-logo.png"
-              alt=""
+              alt="tinys remodeling logo for desktop"
               class="footer__logo-desktop"
             />
             <img
               src="src/img/logos/mogile-logo.png"
-              alt=""
+              alt="tinys remodeling fro mobile"
               class="footer__logo-mobile"
             />
           </a>
@@ -610,19 +637,22 @@
           <h3 class="footer__heading">
             Transforming spaces, building dreams - <span>together</span> !
           </h3>
-          <a href="contact.html" class="btn btn-primary">contact us</a>
+          <a href="contact.html" class="footer__btn btn btn-primary"
+            >contact us</a
+          >
         </article>
 
         <div class="footer__social">
-          <a
-            href="mailto:remodelingtiny@gmail.com"
-            class="fa-regular fa-envelope"
+          <a href="mailto:remodelingtiny@gmail.com">
+            <i class="fa-regular fa-envelope"></i
           ></a>
-          <a href="tel:+1 (727) 310 - 1452" class="fa-solid fa-phone"></a>
-          <a
-            href="https://www.instagram.com/tinys_remodeling/"
-            class="fa-brands fa-instagram"
-            target="_blank"
+
+          <a href="tel:+1 321 265 9840">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tinys_remodeling/" target="_blank">
+            <i class="fa-brands fa-instagram"></i
           ></a>
         </div>
       </div>
@@ -632,28 +662,31 @@
           © Copyright 2015 - <span id="year"></span> Tiny’s Remodeling LLC. All
           rights reserved.
         </p>
-        <p class="footer__author">
-          Designed by <a href="https://dinadoesit.com/">DinaDoesIt</a>
+        <p class="footer__copyright">
+          Designed by
+          <a href="https://dinadoesit.com/" style="text-decoration: underline"
+            >DinaDoesIt</a
+          >
         </p>
       </div>
     </footer>
     <!-- Footer section ends -->
 
     <!-- Mobile-menu section starts -->
-    <section class="mobile" data-key="mobile-menu">
-      <i class="fa-regular fa-circle-xmark" id="close" data-key="close"></i>
+    <section class="mobile" id="mobile-menu">
+      <i class="fa-regular fa-circle-xmark" id="close"></i>
 
       <ul class="mobile__list">
-        <li class="mobile__item">
+        <li>
           <a href="projects.html" class="mobile__link">projects</a>
         </li>
-        <li class="mobile__item">
-          <a href="services.html" class="mobile__link">services</a>
+        <li>
+          <a href="services.html" class="mobile__link active">services</a>
         </li>
-        <li class="mobile__item">
+        <li>
           <a href="about.html" class="mobile__link">about us</a>
         </li>
-        <li class="mobile__item">
+        <li>
           <a href="blog.html" class="mobile__link">read</a>
         </li>
       </ul>
@@ -663,15 +696,14 @@
       </p>
 
       <div class="mobile__icons">
-        <a
-          href="mailto:remodelingtiny@gmail.com"
-          class="fa-regular fa-envelope"
+        <a href="mailto:remodelingtiny@gmail.com">
+          <i class="fa-regular fa-envelope"></i
         ></a>
-        <a href="tel:+1 (727) 310 - 1452" class="fa-solid fa-phone"></a>
-        <a
-          href="https://www.instagram.com/tinys_remodeling/"
-          class="fa-brands fa-instagram"
-          target="_blank"
+        <a href="tel:+1 321 265 9840">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://www.instagram.com/tinys_remodeling/" target="_blank">
+          <i class="fa-brands fa-instagram"></i
         ></a>
       </div>
 
@@ -681,23 +713,25 @@
 
     <!-- Social icons starts -->
     <div class="social__icons">
+      <a href="https://www.instagram.com/tinys_remodeling/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
       <a
-        href="https://www.instagram.com/tinys_remodeling/"
-        class="fa-brands fa-instagram"
+        href="https://www.facebook.com/profile.php?id=61567153992759"
         target="_blank"
-      ></a>
-      <a
-        href="
-            https://www.facebook.com/profile.php?id=61567153992759&mibextid=wwXIfr&rdid=7pcRc8vwoJMzxS08&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FmSxm6YDXGDdfTg36%2F%3Fmibextid%3DwwXIfr"
-        class="fa-brands fa-facebook-f"
-        target="_blank"
-      ></a>
-      <a href="tel:+1 (321) 265 - 9840" class="fa-solid fa-phone"></a>
+      >
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="tel:+1 321 265 9840">
+        <i class="fa-solid fa-phone"></i>
+      </a>
     </div>
     <!-- Social icons  ends -->
 
     <!-- Scroll to top -->
-    <a href="#" class="arrow__up fa-solid fa-chevron-up"></a>
+    <i class="arrow__up fa-solid fa-chevron-up" aria-hidden="true"></i>
 
     <!-- custom js -->
     <script src="src/js/main.js"></script>

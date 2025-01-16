@@ -10,12 +10,11 @@
   );
   box-shadow: 0px 0px 45.3px -3px rgba(255, 255, 255, 0.09);
   padding: 70px 50px;
-  border-radius: 30px;
-  margin-top: 90px;
-  margin-bottom: 90px;
+  border-radius: 2rem;
+  margin: 5rem auto;
 
   @include rwd(1200) {
-    padding: 70px 16px;
+    padding: 70px 1rem;
     flex-direction: column;
     align-items: stretch;
     background: linear-gradient(
@@ -27,56 +26,52 @@
   }
 
   &__item {
+    flex: 1;
     @include rwd(1200) {
       text-align: center;
     }
-    flex: 1;
+  }
 
-    .contact-form__heading {
-      @include text(40px, 600, $white-color);
-      @include rwd(1200) {
-        text-align: center;
-      }
-      @include rwd(576) {
-        font-size: 30px;
-      }
-      margin-bottom: 1.5rem;
+  &__heading {
+    @include text(40px, 600, $white-color);
+    margin-bottom: 1.5rem;
+    @include rwd(1200) {
+      text-align: center;
+    }
+    @include rwd(576) {
+      font-size: 30px;
+    }
+  }
+
+  &__desc {
+    color: rgba(230, 230, 230, 1);
+    width: 400px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    @include rwd(1200) {
+      margin: 0 auto 30px;
+    }
+    @include rwd(576) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
     }
 
-    .contact-form__desc {
-      @include rwd(1200) {
-        margin: 0 auto 30px;
-      }
-      @include rwd(576) {
-        width: 100%;
-      }
-      color: rgba(230, 230, 230, 1);
-      width: 400px;
-      margin-bottom: 40px;
-      font-weight: 300;
-
-      @include rwd(576) {
-        margin-bottom: 50px;
-      }
+    i {
+      margin-right: 10px;
     }
 
-    .contact-form__link {
-      display: block;
-      font-size: 17px;
-      font-weight: 500;
-
-      &:not(:last-child) {
-        margin-bottom: 16px;
-      }
-
-      i {
-        margin-right: 10px;
-      }
-
-      &:hover {
-        text-decoration: underline;
-        color: $white-color;
-      }
+    &:hover {
+      text-decoration: underline;
+      color: $white-color;
     }
   }
 
@@ -95,11 +90,11 @@
 
       label {
         @include text(15px, 500, $white-color, capitalize);
+        display: block;
+        margin-bottom: 10px;
         @include rwd(1200) {
           text-align: center;
         }
-        display: block;
-        margin-bottom: 10px;
       }
 
       input {
@@ -129,12 +124,12 @@
         resize: none;
 
         &::placeholder {
-          @include rwd(576) {
-            font-weight: 4a00;
-          }
           text-transform: capitalize;
           font-family: $font-family;
           font-size: 15px;
+          @include rwd(576) {
+            font-weight: 400;
+          }
         }
       }
     }

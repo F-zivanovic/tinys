@@ -10,7 +10,7 @@
 
     <!-- TODO: meta -->
 
-    <!-- font awesome -->
+    <!-- Font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -19,7 +19,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- google fonts -->
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
 
-    <!-- custom css -->
+    <!-- Custom css -->
     <link rel="stylesheet" href="src/css/main.css" />
   </head>
 
@@ -37,30 +37,22 @@
       <a href="index.html" class="nav__logo">
         <img
           src="src/img/logos/desktop-logo.png"
-          alt="tinys remodeling logo"
+          alt="tinys remodeling logo for desktop"
           class="nav__logo-desktop"
         />
         <img
           src="src/img/logos/mogile-logo.png"
-          alt="tinys remodeling logo"
+          alt="tinys remodeling logo for mobile"
           class="nav__logo-mobile"
         />
       </a>
 
       <ul class="nav__list">
-        <li class="nav__list__item">
-          <a href="projects.html" class="nav__link">projects</a>
-        </li>
-        <li class="nav__list__item">
-          <a href="services.html" class="nav__link">services</a>
-        </li>
-        <li class="nav__list__item">
-          <a href="about.html" class="nav__link">about</a>
-        </li>
-        <li class="nav__list__item">
-          <a href="blog.html" class="nav__link">read</a>
-        </li>
-        <li class="nav__list__item">
+        <li><a href="projects.html" class="nav__link">projects</a></li>
+        <li><a href="services.html" class="nav__link">services</a></li>
+        <li><a href="about.html" class="nav__link">about</a></li>
+        <li><a href="blog.html" class="nav__link">read</a></li>
+        <li>
           <a
             href="contact.html"
             class="nav__link nav__link--btn btn btn-primary"
@@ -69,13 +61,13 @@
         </li>
       </ul>
 
-      <div class="nav__hamburger" data-key="hamburger">
+      <div class="nav__hamburger" id="hamburger">
         <div class="hamburger__line"></div>
         <div class="hamburger__line hamburger__line--mid"></div>
         <div class="hamburger__line"></div>
       </div>
     </nav>
-    <!-- Nav section ends  -->
+    <!-- Nav section ends -->
 
     <div class="contact" id="contact">
       <h1 class="contact__heading">How Can We Assist You?</h1>
@@ -84,7 +76,12 @@
         just want to share your thoughts, feel free to reach out. Our team is
         here to listen and assist you!
       </p>
-      <img src="src/img/icons/key.png" class="contact__key" alt="" />
+      <img
+        src="src/img/icons/key.png"
+        class="contact__key"
+        alt="image of key"
+        aria-hidden="true"
+      />
     </div>
 
     <!-- Contact Form section starts -->
@@ -172,12 +169,12 @@
           <a href="index.html" class="footer__logo">
             <img
               src="src/img/logos/desktop-logo.png"
-              alt=""
+              alt="tinys remodeling logo for desktop"
               class="footer__logo-desktop"
             />
             <img
               src="src/img/logos/mogile-logo.png"
-              alt=""
+              alt="tinys remodeling fro mobile"
               class="footer__logo-mobile"
             />
           </a>
@@ -199,19 +196,22 @@
           <h3 class="footer__heading">
             Transforming spaces, building dreams - <span>together</span> !
           </h3>
-          <a href="#contact" class="btn btn-primary">contact us</a>
+          <a href="contact.html" class="footer__btn btn btn-primary"
+            >contact us</a
+          >
         </article>
 
         <div class="footer__social">
-          <a
-            href="mailto:remodelingtiny@gmail.com"
-            class="fa-regular fa-envelope"
+          <a href="mailto:remodelingtiny@gmail.com">
+            <i class="fa-regular fa-envelope"></i
           ></a>
-          <a href="tel:+1 (727) 310 - 1452" class="fa-solid fa-phone"></a>
-          <a
-            href="https://www.instagram.com/tinys_remodeling/"
-            class="fa-brands fa-instagram"
-            target="_blank"
+
+          <a href="tel:+1 321 265 9840">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tinys_remodeling/" target="_blank">
+            <i class="fa-brands fa-instagram"></i
           ></a>
         </div>
       </div>
@@ -221,28 +221,31 @@
           © Copyright 2015 - <span id="year"></span> Tiny’s Remodeling LLC. All
           rights reserved.
         </p>
-        <p class="footer__author">
-          Designed by <a href="https://dinadoesit.com/">DinaDoesIt</a>
+        <p class="footer__copyright">
+          Designed by
+          <a href="https://dinadoesit.com/" style="text-decoration: underline"
+            >DinaDoesIt</a
+          >
         </p>
       </div>
     </footer>
     <!-- Footer section ends -->
 
     <!-- Mobile-menu section starts -->
-    <section class="mobile" data-key="mobile-menu">
-      <i class="fa-regular fa-circle-xmark" id="close" data-key="close"></i>
+    <section class="mobile" id="mobile-menu">
+      <i class="fa-regular fa-circle-xmark" id="close"></i>
 
       <ul class="mobile__list">
-        <li class="mobile__item">
+        <li>
           <a href="projects.html" class="mobile__link">projects</a>
         </li>
-        <li class="mobile__item">
+        <li>
           <a href="services.html" class="mobile__link">services</a>
         </li>
-        <li class="mobile__item">
+        <li>
           <a href="about.html" class="mobile__link">about us</a>
         </li>
-        <li class="mobile__item">
+        <li>
           <a href="blog.html" class="mobile__link">read</a>
         </li>
       </ul>
@@ -252,15 +255,14 @@
       </p>
 
       <div class="mobile__icons">
-        <a
-          href="mailto:remodelingtiny@gmail.com"
-          class="fa-regular fa-envelope"
+        <a href="mailto:remodelingtiny@gmail.com">
+          <i class="fa-regular fa-envelope"></i
         ></a>
-        <a href="tel:+1 (727) 310 - 1452" class="fa-solid fa-phone"></a>
-        <a
-          href="https://www.instagram.com/tinys_remodeling/"
-          class="fa-brands fa-instagram"
-          target="_blank"
+        <a href="tel:+1 321 265 9840">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://www.instagram.com/tinys_remodeling/" target="_blank">
+          <i class="fa-brands fa-instagram"></i
         ></a>
       </div>
 
@@ -270,23 +272,25 @@
 
     <!-- Social icons starts -->
     <div class="social__icons">
+      <a href="https://www.instagram.com/tinys_remodeling/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
       <a
-        href="https://www.instagram.com/tinys_remodeling/"
-        class="fa-brands fa-instagram"
+        href="https://www.facebook.com/profile.php?id=61567153992759"
         target="_blank"
-      ></a>
-      <a
-        href="
-            https://www.facebook.com/profile.php?id=61567153992759&mibextid=wwXIfr&rdid=7pcRc8vwoJMzxS08&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FmSxm6YDXGDdfTg36%2F%3Fmibextid%3DwwXIfr"
-        class="fa-brands fa-facebook-f"
-        target="_blank"
-      ></a>
-      <a href="tel:+1 (321) 265 - 9840" class="fa-solid fa-phone"></a>
+      >
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="tel:+1 321 265 9840">
+        <i class="fa-solid fa-phone"></i>
+      </a>
     </div>
     <!-- Social icons  ends -->
 
     <!-- Scroll to top -->
-    <a href="#" class="arrow__up fa-solid fa-chevron-up"></a>
+    <i class="arrow__up fa-solid fa-chevron-up" aria-hidden="true"></i>
 
     <!-- custom js -->
     <script src="src/js/main.js"></script>

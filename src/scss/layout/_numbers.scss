@@ -1,37 +1,44 @@
-@use '../abstract/index' as *;
+@use "../abstract/index" as *;
 
+.numbers {
+  @include flex(center, center, wrap);
+  position: relative;
+  @include rwd(992) {
+    row-gap: 4rem;
+  }
 
+  @include rwd(576) {
+    scroll-margin-top: 80px;
+  }
 
-.numbers{
-    @include flex(center, center, wrap);
-    @include rwd(992){ row-gap: 64px; }
-    @include rwd(576){ scroll-margin-top: 80px; }
-    position: relative;
+  &__item {
+    flex-basis: 20%;
 
-    &__item{
-        flex-basis:20%;
-
-        @include rwd(992){ flex-basis:45%; }
-
-        .numbers__number{
-            @include text(44px, 700, $primary-color, none, center);
-            @include rwd(576){ font-size: 36px; }
-        }
-
-        .numbers__name{
-            @include text(14px, 600, $white-color, uppercase, center);
-            
-            @include rwd(576){
-                width: 100px;
-                margin: auto;
-            }
-        }
+    @include rwd(992) {
+      flex-basis: 45%;
     }
+  }
 
-
-    &__building{
-        @include positioning(absolute, auto, auto, 0, -150px, 500px);
-        @include rwd(992){ display: none; }
-    width: 400px;
+  &__number {
+    @include text(44px, 700, $primary-color, none, center);
+    @include rwd(576) {
+      font-size: 36px;
     }
+  }
+
+  &__name {
+    @include text(14px, 600, $white-color, uppercase, center);
+
+    @include rwd(576) {
+      width: 100px;
+      margin: auto;
+    }
+  }
+
+  &__building {
+    @include positioning(absolute, auto, auto, 0, -150px, 400px);
+    @include rwd(992) {
+      display: none;
+    }
+  }
 }
