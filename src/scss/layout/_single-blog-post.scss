@@ -1,0 +1,170 @@
+@use "../abstract/index" as *;
+
+.header-bp {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+
+    &--eco{
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/blog/blog-posts/eco-home.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+  }
+
+    &--drawing{
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/blog/blog-posts/top-view-hand-drawing-living-room.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+  }
+
+  &--spacious{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../src/img/blog/blog-posts/spacious-study-room-with-table-shelves.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--materials{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../src/img/blog/blog-posts/right-materials.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--la{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../src/img/blog/blog-posts/la-fire.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--kitchen{
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/blog/blog-posts/kitchen.webp");
+       background-size: cover;
+       background-repeat: no-repeat;
+  }
+
+    &--kitchen1{
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/blog/blog-posts/Kitchen\ remodeling.webp");
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+  }
+
+    &--bathroom{
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/blog/blog-posts/bathroom.webp");
+       background-size: cover;
+       background-repeat: no-repeat;
+  }
+
+  &--garden{
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/blog/blog-posts/gardener-plants-flowers-garden-closeup-garden-care-gardening-concept.webp");
+       background-size: cover;
+       background-repeat: no-repeat;
+  }
+
+    &--spaces{
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/blog/blog-posts/modern-minimalist-studio-apartment.webp");
+       background-size: cover;
+       background-repeat: no-repeat;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: clamp(30px, 5vw, 46px);
+    margin: 0 10%;
+
+    span{ color: $primary-color;}
+  }
+}
+
+.blog-post {
+
+  &__text {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+
+    span{ font-weight: bold; }
+  }
+
+  &__heading {
+    margin: 2rem 0;
+    font-size: 2rem;
+    text-transform: capitalize;
+
+    @include rwd(576) { font-size: 1.5rem; }
+  }
+
+  &__list {
+    padding-left: 3rem;
+    list-style-type: disc;
+
+    @include rwd(576) { padding-left: 2rem; }
+
+    &__item {
+      color: $white-color;
+
+      margin-bottom: 1rem;
+
+      span { font-weight: bold; }
+    }
+  }
+
+  &__cta {
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+
+  &__sharing{
+    @include flex(space-between, flex-end);
+
+    @include rwd(576){
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 2rem;
+    }
+  }
+
+  &__share{
+    color: $primary-color;
+
+    font-weight: 700;
+    font-size: 20px;
+
+     @include rwd(576){ font-size: 1rem;}
+  }
+  &__icons{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+
+    a{ font-size: 1.3rem; }
+  }
+
+  &__blog{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    a{ 
+      font-size: 14px;
+
+      &:hover{ color: $primary-color;}
+     }
+
+    span{ color: $primary-color; }
+  }
+}

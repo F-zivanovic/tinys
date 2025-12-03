@@ -1,0 +1,178 @@
+@use "../abstract/index" as *;
+
+
+#single-project{ background-color: black; }
+
+.sp-header{
+  height: 70vh;
+  display: flex;
+  align-items: center;
+
+  @include rwd(768){
+      justify-content: center;
+      text-align: center;
+  }
+
+
+  &.sp-one{
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/projects/project1/project1-bathroom-after.webp");
+      background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+  }
+
+  &.sp-two{
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/projects/project2/project2-kitchen-after.webp");
+            background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center
+  }
+
+ &.sp-three{
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../src/img/projects/project3/project3-bathroom-after.webp");
+            background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center
+  }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: clamp(30px, 5vw, 46px);
+        margin: 0 10%;
+
+        span{ color: $primary-color;}
+  }
+
+}
+
+.singleProject{
+
+      &__wrapper{
+            @include flex(space-between, flex-start);
+
+            @include rwd(1200){
+                  flex-direction: column;
+                  gap: 5rem;
+            }
+      }
+
+
+      &__item--small{
+            flex-basis: 25%;
+            background-color: #272727;
+            padding: 2rem;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: sticky;
+            top: 20%;
+
+            @include rwd(992){
+                  position: static;
+            }
+      }
+
+      &__item--large{
+            display: flex;
+            gap: 3rem;
+            flex-basis: 70%;
+
+            &>*{
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: 2rem;
+            }
+      }
+
+      &__details{
+            font-weight: 600;
+            font-size: 22px;
+            text-align: center;
+      }
+
+      &__list{
+            list-style-type: disc !important;
+            text-align: left;
+            font-size: 14px;
+            padding-left: 1rem;
+
+            li:not(:last-child){
+                  margin-bottom: 0.5rem;
+            }
+      }
+
+      &__desc{
+            text-align: justify;
+            font-size: 14px;
+      }
+
+      &__group{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+      }
+
+      &__header{
+            display: flex;
+            justify-content: space-evenly;
+
+            @include rwd(768){ display: none; }
+      }
+
+      &__heading{
+            text-transform: uppercase;
+            font-size: 2rem;
+            text-align: center;
+      }
+
+      &__text{    
+            display: none;
+
+            @include rwd(768){
+                  display: block;
+                  text-transform: uppercase;
+                  font-size: 2rem;
+                  text-align: center;
+                  font-weight: 700;
+                  margin-bottom: 2rem;
+                  margin-top: 3rem;
+            }
+      }
+
+      &__box{
+            display: flex;
+            gap: 1rem;
+
+            @include rwd(768){
+                  flex-direction: column;
+            }
+      }
+
+      &__img{
+            position: relative;
+      }
+
+      &__room{
+            @include positioning(absolute, auto, 0, 0, 0, 100%);
+            padding-left: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: #15161794;
+            text-transform: capitalize;
+      }
+
+      &__cta{
+            align-self: end;
+
+            i{ 
+                  color: $primary-color;
+                  margin-right: 0.5rem;
+            }
+      }
+      
+}
