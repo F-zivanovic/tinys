@@ -71,9 +71,7 @@
             position: sticky;
             top: 20%;
 
-            @include rwd(992){
-                  position: static;
-            }
+            @include rwd(1200){ position: static; }
       }
 
       &__item--large{
@@ -168,6 +166,10 @@
 
       &__cta{
             align-self: end;
+
+            @include rwd(992){
+                  align-self: center;
+            }
 
             i{ 
                   color: $primary-color;
